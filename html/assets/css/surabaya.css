@@ -1,0 +1,226 @@
+/* START CSS AYOSURABAYA */
+
+/* MEDIA 1000px */
+@media (min-width: 576px) {
+  .container, .container-sm {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container, .container-sm, .container-md {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container, .container-sm, .container-md, .container-lg {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: 1000px;
+  }
+}
+@media screen and (max-width: 600px) {
+  div.fading {
+    display: none;
+  }
+}
+
+body {
+	padding-top: 75px;
+	font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: #35579f;
+}
+a:hover{	
+    text-decoration: none;
+    color: #35579f;
+}
+
+#fix-banner-top {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    margin-left: -550px;
+    z-index: 9999;
+}
+
+/* big headline css area --------------- */
+h4 {
+    position: relative;
+    color: #35579f;
+    font-size: 20px;
+    font-weight: bold;
+}
+h4 span {
+    background-color: white;
+    padding-right: 10px;
+}
+h4:after {
+    content:"";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0.6em;
+    border-top: 5px solid #949494;
+    z-index: -1;
+}
+
+/* ukuran font */
+.sub-head-14{
+	font-weight: bold;
+	font-size: 14px;
+    color: #000;
+    text-decoration: none;
+    text-transform: capitalize;
+    line-height: normal;
+}
+.sub-head-16{
+	font-weight: bold;
+	font-size: 16px;
+    color: #000;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.sub-head-18{
+	font-weight: bold;
+	font-size: 18px;
+    color: #000;
+    text-decoration: none;
+    text-transform: capitalize;
+    line-height: normal;
+}
+.sub-head-20{
+	font-weight: bold;
+	font-size: 20px;
+    color: #000;
+    text-decoration: none;
+    text-transform: capitalize;
+    line-height: normal;
+}
+span.sub-head-date{
+	font-size: 11px;
+    color: #35579f;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.headline-sub{
+	border-left: 5px solid #35579f;
+	padding-left: 5px;
+	margin-bottom: 10px;
+}
+
+/*ukuran gambar */
+.headline-img{
+	width: 640px;
+	height: 280px;
+	border-bottom: 8px solid #35579f;
+}
+.headline-img-thumb{
+	width: 240px;
+	height: 100px;
+	border-bottom: 8px solid #35579f;
+}
+.headline-img-sm{	
+	width: 240px;
+	height: 120px;
+	border-left: 3px solid #35579f;
+	padding-left: 3px;
+	display: block; 
+	/* background-image: url("http://placehold.it/240x120"); */
+}
+
+
+.headline-box{
+    float: left;
+    color: #fff;
+    background-color: #35579f;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .003em;
+    position: absolute;
+    z-index: 1;
+    margin: 10px;
+}
+
+span.sub-head-cat{
+	font-size: 11px;
+    color: #fff;
+    background-color: #35579f;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 3px;
+}
+.sub-head-box{
+	color: #fff;
+	font-weight: bold;
+}
+.sub-head-box:hover{
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/* zoom animation hover */
+.img-zoom { 
+    overflow: hidden; 
+    margin: 0 auto; 
+}   
+.img-zoom img { 
+    width: 100%; 
+    transition: 0.5s all ease-in-out; 
+}   
+.img-zoom:hover img { 
+    transform: scale(1.2);
+    background-color: #fff; 
+}
+.shade{	/* bayangan */
+	-webkit-box-shadow: 1px 1px 3px 0px rgba(163,163,163,0.75);
+	-moz-box-shadow: 1px 1px 3px 0px rgba(163,163,163,0.75);
+	box-shadow: 1px 1px 3px 0px rgba(163,163,163,0.75);
+} 
+
+/* right ads */
+.ads-disp{
+	width: 300px;
+	display: block;
+}
+
+/* list kanan */
+.pop-list{
+	position: relative;
+	display: block;
+	padding: 5px;
+	background-color: #fff;
+	font-weight: bold;
+	font-size: 16px;
+}
+.dashing{
+	border-bottom: 1px solid #000;
+}
+
+/* line css --------------------- */
+.left-blue-title{
+  border-left: 3px solid #35579f;
+  padding-left: 5px;
+
+}
+
+/*footer section --------------------- */
+.font-footer-big{
+	font-weight: bold;
+	color: #fff;
+}
+.font-footer-ayo{
+	color: #f6921e;
+}
+/* END CSS AYOSURABAYA */
