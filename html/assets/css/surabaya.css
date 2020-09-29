@@ -24,7 +24,7 @@
     max-width: 1000px;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   div.fading {
     display: none;
   }
@@ -32,15 +32,84 @@
 
 body {
 	padding-top: 75px;
-	font-family: 'Roboto', sans-serif;
+	font-family: roboto condensed,sans-serif;
 }
 
+/* link section */
 a {
     color: #35579f;
 }
 a:hover{	
     text-decoration: none;
     color: #35579f;
+}
+
+/* Link rotate */
+.roll-link {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    -webkit-perspective: 600px;
+       -moz-perspective: 600px;
+       -ms-perspective: 600px;
+       perspective: 600px;
+    -webkit-perspective-origin: 50% 50%;
+       -moz-perspective-origin: 50% 50%;
+       -ms-perspective-origin: 50% 50%;
+       perspective-origin: 50% 50%;
+
+}
+.roll-link:hover {text-decoration:none;}
+.roll-link span {
+    display: block;
+    position: relative;
+    padding: 0 3px;
+
+    -webkit-transition: all 400ms ease;
+       -moz-transition: all 400ms ease;
+       -ms-transition: all 400ms ease;
+       transition: all 400ms ease;
+
+    -webkit-transform-origin: 50% 0%;
+       -moz-transform-origin: 50% 0%;
+       -ms-transform-origin: 50% 0%;
+       transform-origin: 50% 0%;
+
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+       -ms-transform-style: preserve-3d;
+       transform-style: preserve-3d;
+}
+.roll-link:hover span {
+        background: #fff;
+        -webkit-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+           -moz-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+           -ms-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+           transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+}
+.roll-link span:after {
+    content: attr(data-title);
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0 5px;
+    margin-left: -5px;
+    color: #ffba08;
+    background: #fff;
+    -webkit-transform-origin: 50% 0%;
+       -moz-transform-origin: 50% 0%;
+       -ms-transform-origin: 50% 0%;
+       transform-origin: 50% 0%;
+    -webkit-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+       -moz-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+       -ms-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+       transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+}
+
+.mml-1 /* margin left -1 */
+{
+	margin-left: -10px;
 }
 
 #fix-banner-top {
@@ -56,7 +125,6 @@ h4 {
     position: relative;
     color: #35579f;
     font-size: 20px;
-    font-weight: bold;
 }
 h4 span {
     background-color: white;
@@ -68,8 +136,8 @@ h4:after {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 0.6em;
-    border-top: 5px solid #949494;
+    height: 17px;
+    border-top: 10px solid #cccccc;
     z-index: -1;
 }
 
@@ -111,12 +179,31 @@ span.sub-head-date{
     text-decoration: none;
     text-transform: uppercase;
 }
+.sub-head-date:hover{
+	color: #ffba08;
+	text-decoration: none;
+}
 .headline-sub{
 	border-left: 5px solid #35579f;
 	padding-left: 5px;
 	margin-bottom: 10px;
 }
-
+.logo-text {
+    margin: 0;
+    padding: 0;
+    color: #000;
+    font-size: .9em;
+    text-transform: uppercase;
+    letter-spacing: .33em;
+}
+.ayo-menu-icon {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(https://www.ayosurabaya.com/assets/img/logo-20.png) no-repeat;
+}
 /*ukuran gambar */
 .headline-img{
 	width: 640px;
@@ -128,6 +215,11 @@ span.sub-head-date{
 	height: 100px;
 	border-bottom: 8px solid #35579f;
 }
+.headline-img-med{
+	width: 320px;
+	height: 160px;
+	border-bottom: 8px solid #35579f;
+}
 .headline-img-sm{	
 	width: 240px;
 	height: 120px;
@@ -135,6 +227,10 @@ span.sub-head-date{
 	padding-left: 3px;
 	display: block; 
 	/* background-image: url("http://placehold.it/240x120"); */
+}
+.headline-img-bellow{
+	width: 320px;
+	height: 240px;
 }
 
 
@@ -158,22 +254,58 @@ span.sub-head-cat{
     background-color: #35579f;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 3px;
+    padding: 5px;
 }
 .sub-head-box{
 	color: #fff;
-	font-weight: bold;
 }
 .sub-head-box:hover{
-	color: #fff;
-	font-weight: bold;
+	color: #ffba08;
 	text-decoration: none;
+}
+
+/* nav area */
+.bg-nav-ayosby {
+    background-color: #35579f;
+    border-bottom: 4px solid #ffba08;
+}
+.nav-a {
+	text-transform: uppercase;
+	color: #fff;
+}
+.nav-a:hover {
+	color: #35579f;
+	background-color: #fff;
+}
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}
+
+/* sidebar acc */
+.sidebar-sticky {
+  	position: -webkit-sticky;
+	position: sticky;
+	top: 140px;
+    
+}
+.menu-sticky {
+  	position: -webkit-sticky;
+	position: sticky;
+	top: 75px;
+	z-index: 999;
+    
 }
 
 /* zoom animation hover */
 .img-zoom { 
     overflow: hidden; 
-    margin: 0 auto; 
 }   
 .img-zoom img { 
     width: 100%; 
@@ -189,9 +321,13 @@ span.sub-head-cat{
 	box-shadow: 1px 1px 3px 0px rgba(163,163,163,0.75);
 } 
 
-/* right ads */
+/* ads */
 .ads-disp{
 	width: 300px;
+	display: block;
+}
+.ads-rectangle{
+	width: 930px;
 	display: block;
 }
 
@@ -223,4 +359,8 @@ span.sub-head-cat{
 .font-footer-ayo{
 	color: #f6921e;
 }
+
+
+
+
 /* END CSS AYOSURABAYA */
