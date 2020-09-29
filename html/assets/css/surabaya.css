@@ -29,6 +29,30 @@
     display: none;
   }
 }
+@media all and (min-width:991px) {  
+  .dropdown:after{
+      content: ''; 
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transition: opacity .15s ease-in-out;
+      opacity: 0;
+      visibility:hidden;
+      background-color: rgba(0,0,0,.7);
+      pointer-events: none;
+  }
+  .dropdown.show .nav-link{
+	position:relative;
+	z-index:12;
+  }
+  .dropdown.show:after{
+	z-index:10; opacity:1; 
+	visibility:visible;
+	position: fixed;
+  }
+}
+
 
 body {
 	padding-top: 75px;
@@ -111,13 +135,85 @@ a:hover{
 {
 	margin-left: -10px;
 }
+.mml-2 /* margin left -1 */
+{
+	margin-left: -5px;
+}
 
 #fix-banner-top {
     position: fixed;
     top: 0;
     left: 50%;
     margin-left: -550px;
-    z-index: 9999;
+    z-index: 10;
+}
+
+/* nav area */
+.bg-date-nav{ 
+    color: #35579f;
+    padding: 8px;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-left: -30px;
+}
+.custom-toggler.navbar-toggler { 
+    border-color: #fff; 
+}
+.custom-toggler .navbar-toggler-icon { 
+    background-image: url( 
+"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E"); 
+ } 
+.bg-nav-ayosby {
+    background-color: #35579f;
+    border-bottom: 4px solid #ffba08;
+}
+.nav-a {
+	text-transform: uppercase;
+	color: #fff;
+}
+.nav-a:hover {
+	color: #35579f;
+	background-color: #fff;
+}
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}
+
+/*medsos*/
+.medsos-icon{
+	margin: 5px;
+	padding: 2px;
+}
+.fb-bg:hover{
+	color: #135277;
+  	transition: 0.3s;
+}
+.twt-bg:hover{
+	color: #1a91da;
+  	transition: 0.3s;
+}
+.yt-bg:hover{	
+	color: #ef1313;
+  	transition: 0.3s;
+}
+.ig-bg:hover{	
+	color: #aa54c4;
+  	transition: 0.3s;
+}
+.rss-bg:hover{
+	color: #e28d31;
+  	transition: 0.3s;
+}
+.medsos{
+	font-size: 14px;
+	box-sizing: border-box;
 }
 
 /* big headline css area --------------- */
@@ -240,7 +336,6 @@ span.sub-head-date{
     background-color: #35579f;
     padding: 5px 10px;
     font-size: 16px;
-    font-weight: bold;
     text-transform: uppercase;
     letter-spacing: .003em;
     position: absolute;
@@ -262,30 +357,6 @@ span.sub-head-cat{
 .sub-head-box:hover{
 	color: #ffba08;
 	text-decoration: none;
-}
-
-/* nav area */
-.bg-nav-ayosby {
-    background-color: #35579f;
-    border-bottom: 4px solid #ffba08;
-}
-.nav-a {
-	text-transform: uppercase;
-	color: #fff;
-}
-.nav-a:hover {
-	color: #35579f;
-	background-color: #fff;
-}
-.dropdown-toggle::after {
-    display: inline-block;
-    margin-left: .255em;
-    vertical-align: .255em;
-    content: "";
-    border-top: .3em solid;
-    border-right: .3em solid transparent;
-    border-bottom: 0;
-    border-left: .3em solid transparent;
 }
 
 /* sidebar acc */
@@ -359,8 +430,5 @@ span.sub-head-cat{
 .font-footer-ayo{
 	color: #f6921e;
 }
-
-
-
 
 /* END CSS AYOSURABAYA */
