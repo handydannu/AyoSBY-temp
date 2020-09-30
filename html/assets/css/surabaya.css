@@ -53,10 +53,82 @@
   }
 }
 
-
 body {
 	padding-top: 75px;
 	font-family: roboto condensed,sans-serif;
+}
+
+/* breadcrumb */
+.breadcrumb-arrow .breadcrumb-item+.breadcrumb-item::before {
+  content: '';
+}
+.breadcrumb-arrow {
+  height: 40px;
+  line-height: 40px;
+}
+.breadcrumb-arrow .breadcrumb-item:first-child a {
+  border-radius: 4px 0 0 4px;
+}
+.breadcrumb-arrow .breadcrumb-item,
+.breadcrumb-arrow .breadcrumb-item a,
+.breadcrumb-arrow .breadcrumb-item span {
+  display: inline-block;
+  vertical-align: top;
+}
+.breadcrumb-arrow .breadcrumb-item:not(:first-child) {
+  margin-left: -1px;
+}
+.breadcrumb-arrow .breadcrumb-item+.breadcrumb-item:before {
+  padding: 0;
+  content: "";
+}
+.breadcrumb-arrow .breadcrumb-item a,
+.breadcrumb-arrow .breadcrumb-item.active {
+  height: 40px;
+  padding: 0 10px 0 25px;
+  line-height: 40px;
+}
+.breadcrumb-arrow .breadcrumb-item a {
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  background-color: #35579f;
+  border: 1px solid #35579f;
+}
+.breadcrumb-arrow .breadcrumb-item a:after,
+.breadcrumb-arrow .breadcrumb-item a:before {
+  position: absolute;
+  top: -1px;
+  width: 0;
+  height: 0;
+  content: '';
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
+.breadcrumb-arrow .breadcrumb-item a:before {
+  right: -10px;
+  z-index: 3;
+  border-left-color: #35579f;
+  border-left-style: solid;
+  border-left-width: 11px;
+}
+.breadcrumb-arrow .breadcrumb-item a:after {
+  right: -11px;
+  z-index: 2;
+  border-left: 11px solid #fff;
+}
+.breadcrumb-arrow .breadcrumb-item a:focus,
+.breadcrumb-arrow li a:hover {
+  background-color: #F0931D;
+  border: 1px solid #F0931D;
+}
+.breadcrumb-arrow .breadcrumb-item a:focus:before,
+.breadcrumb-arrow li a:hover:before {
+  border-left-color: #F0931D;
+}
+.breadcrumb-arrow li.active:after,
+.breadcrumb-arrow li.active:before {
+  border-left-color: #F0931D;
 }
 
 /* link section */
@@ -119,7 +191,7 @@ a:hover{
     top: 0;
     padding: 0 5px;
     margin-left: -5px;
-    color: #ffba08;
+    color: #F0931D;
     background: #fff;
     -webkit-transform-origin: 50% 0%;
        -moz-transform-origin: 50% 0%;
@@ -191,6 +263,11 @@ a:hover{
     border-right: .3em solid transparent;
     border-bottom: 0;
     border-left: .3em solid transparent;
+}
+.navbar-kanan {
+  width: 100%;
+  float: none;
+  margin-left: 50%;
 }
 
 /*medsos*/
@@ -450,6 +527,55 @@ span.list-numb{
 
 }
 
+/* pagination */
+.pagination-outer{ text-align: center; }
+.pagination{
+    display: inline-flex;
+    position: relative;
+    z-index: 1;
+}
+.pagination li a.page-link{
+    color: #fff;
+    background: transparent;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    padding: 0;
+    margin: 0 2px;
+    width: 40px;
+    height: 40px;
+    border: none;
+    transition: all 0.4s ease 0s;
+}
+.pagination li.active a.page-link,
+.pagination li a.page-link:hover,
+.pagination li.active a.page-link:hover{
+    color: #35579F;
+    background: transparent;
+}
+.pagination li a.page-link:before{
+    content: "";
+    height: 100%;
+    width: 100%;
+    border: 20px solid #35579F;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.3s ease 0s;
+}
+.pagination li a.page-link:hover:before,
+.pagination li.active a.page-link:before {
+    border: 2px solid #35579F;
+}
+@media only screen and (max-width: 480px){
+    .pagination{ display: block; }
+    .pagination li{
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+}
+
 /*footer section --------------------- */
 .footer-line{
 	 border-top: 4px solid #35579f;"
@@ -477,6 +603,13 @@ span.list-numb{
 }
 .ayo-orange{
 	color: #F0931D;
+}
+.mml-0{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+hr.new1 {
+  border-top: 1px solid #e0e0e0;
 }
 
 /* END CSS AYOSURABAYA */
