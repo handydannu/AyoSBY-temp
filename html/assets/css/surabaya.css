@@ -147,6 +147,13 @@ a:hover{
     margin-left: -550px;
     z-index: 10;
 }
+#fix-banner-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    margin-left: -550px;
+    z-index: 10;
+}
 
 /* nav area */
 .bg-date-nav{ 
@@ -172,7 +179,7 @@ a:hover{
 	color: #fff;
 }
 .nav-a:hover {
-	color: #35579f;
+	color: #F0931D;
 	background-color: #fff;
 }
 .dropdown-toggle::after {
@@ -238,6 +245,14 @@ h4:after {
 }
 
 /* ukuran font */
+.sub-head-12{
+	font-weight: bold;
+	font-size: 12px;
+    color: #000;
+    text-decoration: none;
+    text-transform: capitalize;
+    line-height: normal;
+}
 .sub-head-14{
 	font-weight: bold;
 	font-size: 14px;
@@ -300,6 +315,7 @@ span.sub-head-date{
     height: 20px;
     background: url(https://www.ayosurabaya.com/assets/img/logo-20.png) no-repeat;
 }
+
 /*ukuran gambar */
 .headline-img{
 	width: 640px;
@@ -326,10 +342,8 @@ span.sub-head-date{
 }
 .headline-img-bellow{
 	width: 320px;
-	height: 240px;
+	min-height: 240px;
 }
-
-
 .headline-box{
     float: left;
     color: #fff;
@@ -342,7 +356,6 @@ span.sub-head-date{
     z-index: 1;
     margin: 10px;
 }
-
 span.sub-head-cat{
 	font-size: 11px;
     color: #fff;
@@ -370,8 +383,23 @@ span.sub-head-cat{
   	position: -webkit-sticky;
 	position: sticky;
 	top: 75px;
-	z-index: 999;
-    
+	z-index: 999;    
+}
+span.list-numb{
+  background: #35579f;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.6em;
+  margin-right: 5px;
+  text-align: center;
+  width: 1.6em; 
+  float: left;
+	-webkit-box-shadow: 1px 1px 3px 0px rgba(163,163,163,0.75);
+	-moz-box-shadow: 1px 1px 3px 0px rgba(163,163,163,0.75);
+	box-shadow: 1px 1px 3px 0px rgba(163,163,163,0.75);
+
+
 }
 
 /* zoom animation hover */
@@ -423,12 +451,32 @@ span.sub-head-cat{
 }
 
 /*footer section --------------------- */
-.font-footer-big{
-	font-weight: bold;
-	color: #fff;
+.footer-line{
+	 border-top: 4px solid #35579f;"
 }
-.font-footer-ayo{
-	color: #f6921e;
+.sub-footer{
+	font-size: 18px;
+    color: #000;
+    text-decoration: none;
+    text-transform: capitalize;
+    line-height: normal;
+}
+.sub-footer-10
+{
+	font-size: 12px;
+    color: #fff;    
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.sub-footer-10:hover
+{
+	font-size: 12px;
+    color: #F0931D;    
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.ayo-orange{
+	color: #F0931D;
 }
 
 /* END CSS AYOSURABAYA */
