@@ -267,7 +267,7 @@ a:hover{
 .navbar-kanan {
   width: 100%;
   float: none;
-  margin-left: 50%;
+  margin: auto;
 }
 
 /*medsos*/
