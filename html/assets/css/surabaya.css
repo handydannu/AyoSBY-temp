@@ -296,7 +296,7 @@ a:hover{
  } 
 .bg-nav-ayosby {
     background-color: #35579f;
-    border-bottom: 4px solid #ffba08;
+    border-bottom: 4px solid #f7941d;
 }
 .nav-a {
 	text-transform: uppercase;
@@ -395,6 +395,13 @@ h4:after {
 }
 
 /* ukuran font */
+
+.page-subheader {
+    padding: 10px 15px;
+    font-size: 24px;
+    font-weight: 700;
+    border-left: 10px solid #f7941d;
+}
 .sub-head-12{
 	font-size: 12px;
     color: #000;
@@ -696,26 +703,55 @@ span.list-numb{
     text-transform: capitalize;
     line-height: normal;
 }
-.sub-footer-10
+.sub-footer-16
 {
-	font-size: 12px;
+	font-size: 16px;
     color: #fff;    
     text-decoration: none;
     text-transform: uppercase;
+    font-weight: lighter;
 }
-.sub-footer-10:hover
+.sub-footer-16:hover
 {
-	font-size: 12px;
+	font-size: 16px;
+    color: #F0931D;    
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.sub-footer-12
+{
+  font-size: 12px;
+    color: #fff;    
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
+.sub-footer-12:hover
+{
+  font-size: 12px;
     color: #F0931D;    
     text-decoration: none;
     text-transform: uppercase;
 }
 .ayo-orange{
-	color: #F0931D;
+	color: #f7941d;
 }
 hr.new1 {
   border-top: 1px solid #e0e0e0;
 }
 
+/* map responsive */
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:50%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
 /* END CSS AYOSURABAYA */
-
