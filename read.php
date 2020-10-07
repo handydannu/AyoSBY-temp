@@ -7,7 +7,7 @@
 <html lang="en">
 <head>  
   <!-- script meta dll -->
-  <?php include 'components/header-scripts.php';?>	
+  <?php include 'components/header-scripts.php';?>  
 
 </head>
 <body>
@@ -22,14 +22,14 @@
 
   <div class="container"><!-- Page 1 -->     
 
-    <div class="row"><!-- main Column -->    
+    <div class="row"><!-- main Column -->           
 
-      <!-- left sidebar --> 
-      <?php include 'main/left-sidebar.php';?>       
+      <!-- left sidebar   --> 
+      <?php //include 'main/left-sidebar.php';?>   
       <!-- main content --> 
-      <?php include 'main/main-content.php';?>
+      <?php include 'views/read.php';?>      
       <!-- right sidebar --> 
-      <?php include 'main/right-sidebar.php';?> 
+      <?php include 'main/right-sidebar.php';?>
 
     </div><!-- /.row utama -->
     
@@ -37,8 +37,6 @@
 
   <!-- container section 2 -->
   <div class="container">  
-    <!-- section gambar -->      
-    <?php include 'components/photo-latest.php';?>
     <!-- section banner horizontal --> 
     <?php include 'components/banner-hor.php';?>
     <!-- section 3 kategori -->      
@@ -51,8 +49,7 @@
   </footer>
 
 
-	<!-- javascript --> 
-  <?php include 'components/footer-scripts.php';?>
- 
+  <!-- javascript --> 
+  <?php include 'components/footer-scripts.php';?> 
 </body>
 </html>
