@@ -9,7 +9,7 @@
       <li class="nav-item"><a class="nav-link nav-a" href="#">hot news</a></li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle nav-a" href="#" data-toggle="dropdown">persebaya</a>
-          <ul class="dropdown-menu bg-nav-ayosby ">
+          <ul class="dropdown-menu bg-nav-ayosby rounded-0">
           <li><a class="dropdown-item  nav-a" href="#"> Submenu item 1</a></li>
           <li><a class="dropdown-item  nav-a" href="#"> Submenu item 2 </a></li>
           </ul>

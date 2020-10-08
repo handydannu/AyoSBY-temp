@@ -9,7 +9,7 @@
             </a>
           </div>
           <div>
-            <span class="mt-0 sub-head-date"><a href="#"><a class="sub-head-date" href="#">  <i class="fas fa-clock"></i> 12 September</a></span>        
+            <span class="mt-0 sub-head-date"><i class="fas fa-clock"></i> 12 September</span>        
               <p>
                 <a class="sub-head-20" href="#">lorem ipsum sit amet dolor lorem ipsum sit</a>
               </p>
@@ -20,16 +20,16 @@
               <a class="sub-head-16" href="#">Cras justo odio Dapibus ac facilisis in</a>
             </li>
             <li class="pop-list">
-             <a class="sub-head-16" href="#">Cras justo odio Dapibus ac facilisis in</a>
+             <a class="sub-head-16" href="#">ini dia manusia paling kuat didunia setelah hulk hogan di eropa</a>
+            </li>
+            <li class="pop-list">
+             <a class="sub-head-16" href="#">Cara memperbaiki mobil tanpa ke bengkel</a>
             </li>
             <li class="pop-list">
              <a class="sub-head-16" href="#">Cras justo odio Dapibus ac facilisis in</a>
             </li>
             <li class="pop-list">
-             <a class="sub-head-16" href="#">Cras justo odio Dapibus ac facilisis in</a>
-            </li>
-            <li class="pop-list">
-             <a class="sub-head-16" href="#">Cras justo odio Dapibus ac facilisis in</a>
+             <a class="sub-head-16" href="#">berapa harga ROG phone di Indonesia ?</a>
             </li>
           </ul>
         </div>
