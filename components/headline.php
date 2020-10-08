@@ -1,47 +1,72 @@
-          <h4 class="pt-2 mml-1">
-            <a class="roll-link" href="#"><span data-title="HEADLINE"><i class="fas fa-newspaper"></i> HEADLINE</span></a>
-          </h4>
-          <div class="row"><!-- eksperiment-->
+<!-- breaking news ticker -->
+<div class="col-md-12 mt-2">
+    <div class="d-flex justify-content-between align-items-center breaking-news bg-white">
+        <div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news">
+          <span class="d-flex align-items-center">BREAKING</span>
+        </div>
+        <div class="bg-light p-1">
+        <marquee class="news-scroll mt-1" behavior="scroll" direction="left" onmouseover="this.stop();" onmouseout="this.start();"> 
+          <span class="dot"></span> 
+          <a href="#">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </a> 
+          <span class="dot"></span> 
+          <a href="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut </a> 
+          <span class="dot"></span> <a href="#">Duis aute irure dolor in reprehenderit in voluptate velit esse </a> 
+        </marquee></div>
+    </div>
+</div>
 
-            <div class="col-md-6">
-             <a href="#" class="card bg-dark text-white shadow-sm border-0">
-                <img class="img-fluid mx-auto d-block headline-img-med shade" src="https://img-9gag-fun.9cache.com/photo/aqndZvZ_460swp.webp" alt="Card image cap">
-                <div class="card-img-overlay headline-grid d-flex flex-column align-items-start">
-                    <p class="sub-head-date">Charged News Environment Powering Marketing Engagement: CNN’s Andrew Morse</p>                    
-                    <span class="badge badge-hl font-weight-normal mr-2 rounded-0">09:51</span>
-                </div>
-            </a>
+<div class="col-md-6 mt-2 pt-2 pr-2"><!-- big picture -->
+  <a href="#" class="card bg-dark text-white shadow-sm border-0 rounded-0">
+    <img class="img-fluid headline-img" src="https://img-9gag-fun.9cache.com/photo/aqndZvZ_460swp.webp" alt="Card image cap">
+    <div class="card-img-overlay headline-grid d-flex flex-column align-items-start">
+        <p class="sub-head-date">Charged News Environment Powering Marketing Engagement: CNN’s Andrew Morse</p>                    
+        <span class="badge badge-hl font-weight-normal mr-2 rounded-0">09:51</span>
+    </div>
+   </a>
+</div><!-- /big picture -->
 
-             <a href="#" class="card bg-dark text-white shadow-sm border-0 mt-2">
-                <img class="img-fluid mx-auto d-block headline-img-med shade" src="https://static.reuters.com/resources/media/global/assets/images/20201007/20201007_6609773720201007032050.jpg" alt="Card image cap">
-                <div class="card-img-overlay headline-grid d-flex flex-column align-items-start">
-                    <p class="sub-head-date">Charged News Environment Powering Marketing Engagement: CNN’s Andrew Morse</p>                    
-                    <span class="badge badge-hl font-weight-normal mr-2 rounded-0">10:01</span>
-                </div>
-            </a>
-            </div>
+<div class="col-md-6 mt-2"><!-- small picture-->
+    <div class="row">
+      <div class="col-md-6 pl-1 pr-1">
+       
+       <a href="#" class="card bg-dark text-white shadow-sm border-0 mt-2 rounded-0">
+          <img class="img-fluid mx-auto d-block headline-img-med shade" src="https://static.reuters.com/resources/media/global/assets/images/20201007/20201007_6609773720201007032050.jpg" alt="Card image cap">
+          <div class="card-img-overlay headline-grid d-flex flex-column align-items-start">
+              <p class="sub-head-date">Charged News Environment Powering Marketing Engagement: CNN’s Andrew Morse</p>                    
+              <span class="badge badge-hl font-weight-normal mr-2 rounded-0">10:01</span>
+          </div>
+      </a>
 
-            <div class="col-md-6">
-            <a href="https://www.beet.tv/2019/01/cnn.html" class="card bg-dark text-white shadow-sm border-0">
-                <img class="img-fluid mx-auto d-block headline-img-med shade" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/28/3226/daun_ga,bir.jpg" alt="Card image cap">
-                <div class="card-img-overlay headline-grid d-flex flex-column align-items-start">
-                    <p class="sub-head-date">Charged News Environment Powering Marketing Engagement: CNN’s Andrew Morse</p>                    
-                    <span class="badge badge-hl font-weight-normal mr-2 rounded-0">10:21</span>
-                </div>
-            </a>           
+       <a href="#" class="card bg-dark text-white shadow-sm border-0 mt-2 rounded-0">
+          <img class="img-fluid mx-auto d-block headline-img-med shade" src="https://static.reuters.com/resources/media/global/assets/images/20201007/20201007_6609773720201007032050.jpg" alt="Card image cap">
+          <div class="card-img-overlay headline-grid d-flex flex-column align-items-start">
+              <p class="sub-head-date">Charged News Environment Powering Marketing Engagement: CNN’s Andrew Morse</p>                    
+              <span class="badge badge-hl font-weight-normal mr-2 rounded-0">10:01</span>
+          </div>
+      </a>
+      </div>
 
-            <a href="https://www.beet.tv/2019/01/cnn.html" class="card bg-dark text-white shadow-sm border-0 mt-2">
-                <img class="img-fluid mx-auto d-block headline-img-med shade" src="https://i.pinimg.com/564x/74/50/04/745004c696473a0ffc7299267c0c7d39.jpg" alt="Card image cap">
-                <div class="card-img-overlay headline-grid d-flex flex-column align-items-start">
-                    <p class="sub-head-date">Charged News Environment Powering Marketing Engagement: CNN’s Andrew Morse</p>                    
-                    <span class="badge badge-hl font-weight-normal mr-2 rounded-0">10:23</span>
-                </div>
-            </a>
-            </div>
+      <div class="col-md-6 pl-1">
+      <a href="#" class="card bg-dark text-white shadow-sm border-0 mt-2 rounded-0">
+          <img class="img-fluid mx-auto d-block headline-img-med shade" src="https://static.reuters.com/resources/media/global/assets/images/20201007/20201007_6609773720201007032050.jpg" alt="Card image cap">
+          <div class="card-img-overlay headline-grid d-flex flex-column align-items-start">
+              <p class="sub-head-date">Charged News Environment Powering Marketing Engagement: CNN’s Andrew Morse</p>                    
+              <span class="badge badge-hl font-weight-normal mr-2 rounded-0">10:01</span>
+          </div>
+      </a>       
+      <a href="#" class="card bg-dark text-white shadow-sm border-0 mt-2 rounded-0">
+          <img class="img-fluid mx-auto d-block headline-img-med shade" src="https://static.reuters.com/resources/media/global/assets/images/20201007/20201007_6609773720201007032050.jpg" alt="Card image cap">
+          <div class="card-img-overlay headline-grid d-flex flex-column align-items-start">
+              <p class="sub-head-date">Charged News Environment Powering Marketing Engagement: CNN’s Andrew Morse</p>                    
+              <span class="badge badge-hl font-weight-normal mr-2 rounded-0">10:01</span>
+          </div>
+      </a>
+      </div> 
+ </div>  
+</div><!-- eksperiment-->
 
-          </div><!-- eksperiment-->
 
-            <div class="row">
+          <!--  <div class="row">
               <div class="col-md-12"><ul class="list-group list-group-flush" style="margin-right: -10px;margin-left: -15px;">
                 <li class="list-group-item">
                   <span class="badge badge-hl font-weight-normal text-white sub-head-date rounded-0 shadow-sm"><i class="fas fa-clock"></i> 01:21</span> | <a href="#" class="sub-head-16"> surabaya dinobatkan sebagai kota paling bersih di indonesia</a>            
@@ -59,7 +84,7 @@
                
             </div>
 
-          <!-- <div class="headline-box"><i class="fa fa-bookmark"></i> HEADLINE</div>
+           <div class="headline-box"><i class="fa fa-bookmark"></i> HEADLINE</div>
           <div class="shade">
             <a href="#">
               <img class="img-fluid headline-img" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/25/3176/jasad-muhammad-affan-hariyanto-ditemukan-di-tanah-kosong.jpg" alt="Card image cap">

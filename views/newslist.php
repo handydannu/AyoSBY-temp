@@ -15,201 +15,24 @@
 
   <div class="row">
     <!-- list berita -->
-    <div class="col-lg-4 col-sm-4 col-xs-4 p-1">
-      <div class="border-0 rounded-0">
-        <a href="#"><img class="img-fluid headline-img-sm shade" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/28/3226/daun_ga,bir.jpg" alt="..."></a>
-      </div>
-    </div>
-    <div class="col-lg-8 col-sm-8 mt-1">            
-      <span class="mt-0 sub-head-cat"><a href="#" class="sub-head-box">NASIONAL</a></span> 
-      <span class=" mt-0 sub-head-date"><i class="fas fa-clock"></i> 12 September</span>           
-      <p class="mt-2">
-        <a class="sub-head-18" href="#">lorem ipsum sit amet dolor lorem ipsum sit amet dolor lorem ipsum</a>
-      </p>
-    </div><!-- number 1 -->
-    <div class="col-lg-12"><hr class="lb-0"></div>          
-
-    <div class="col-lg-4 col-sm-4 p-1">
-      <div class="border-0 rounded-0">
-        <a href="#"><img class="img-fluid headline-img-sm shade" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/28/3226/daun_ga,bir.jpg" alt="..."></a>
-      </div>
-    </div>
-    <div class="col-lg-8 col-sm-8 mt-1">            
-      <span class="mt-0 sub-head-cat"><a href="#" class="sub-head-box">NASIONAL</a></span> 
-      <span class=" mt-0 sub-head-date"><i class="fas fa-clock"></i> 12 September</span>           
-      <p class="mt-2">
-        <a class="sub-head-18" href="#">lorem ipsum sit amet dolor lorem ipsum sit amet dolor lorem ipsum</a>
-      </p>
-    </div><!-- number 2 -->
-    <div class="col-lg-12"><hr class="lb-0"></div>
-
-    <div class="col-lg-4 col-sm-4 p-1">
-      <div class="border-0 rounded-0">
-        <a href="#"><img class="img-fluid headline-img-sm shade" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/28/3226/daun_ga,bir.jpg" alt="..."></a>
-      </div>
-    </div>
-    <div class="col-lg-8 col-sm-8 mt-1">            
-      <span class="mt-0 sub-head-cat"><a href="#" class="sub-head-box">NASIONAL</a></span> 
-      <span class=" mt-0 sub-head-date"><i class="fas fa-clock"></i> 12 September</span>           
-      <p class="mt-2">
-        <a class="sub-head-18" href="#">lorem ipsum sit amet dolor lorem ipsum sit amet dolor lorem ipsum</a>
-      </p>
-    </div><!-- number 2 -->
-    <div class="col-lg-12"><hr class="lb-0"></div>
-
-    <div class="col-lg-4 col-sm-4 p-1">
-      <div class="border-0 rounded-0">
-        <a href="#"><img class="img-fluid headline-img-sm shade" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/28/3226/daun_ga,bir.jpg" alt="..."></a>
-      </div>
-    </div>
-    <div class="col-lg-8 col-sm-8 mt-1">            
-      <span class="mt-0 sub-head-cat"><a href="#" class="sub-head-box">NASIONAL</a></span> 
-      <span class=" mt-0 sub-head-date"><i class="fas fa-clock"></i> 12 September</span>           
-      <p class="mt-2">
-        <a class="sub-head-18" href="#">lorem ipsum sit amet dolor lorem ipsum sit amet dolor lorem ipsum</a>
-      </p>
-    </div><!-- number 2 -->
-    <div class="col-lg-12"><hr class="lb-0"></div>
-
-    <div class="col-lg-4 col-sm-4 p-1">
-      <div class="border-0 rounded-0">
-        <a href="#"><img class="img-fluid headline-img-sm shade" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/28/3226/daun_ga,bir.jpg" alt="..."></a>
-      </div>
-    </div>
-    <div class="col-lg-8 col-sm-8 mt-1">            
-      <span class="mt-0 sub-head-cat"><a href="#" class="sub-head-box">NASIONAL</a></span> 
-      <span class=" mt-0 sub-head-date"><i class="fas fa-clock"></i> 12 September</span>           
-      <p class="mt-2">
-        <a class="sub-head-18" href="#">lorem ipsum sit amet dolor lorem ipsum sit amet dolor lorem ipsum</a>
-      </p>
-    </div><!-- number 2 -->
-    <div class="col-lg-12"><hr class="lb-0"></div>
-
-    <div class="col-lg-4 col-sm-4 p-1">
-      <div class="border-0 rounded-0">
-        <a href="#"><img class="img-fluid headline-img-sm shade" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/28/3226/daun_ga,bir.jpg" alt="..."></a>
-      </div>
-    </div>
-    <div class="col-lg-8 col-sm-8 mt-1">            
-      <span class="mt-0 sub-head-cat"><a href="#" class="sub-head-box">NASIONAL</a></span> 
-      <span class=" mt-0 sub-head-date"><i class="fas fa-clock"></i> 12 September</span>           
-      <p class="mt-2">
-        <a class="sub-head-18" href="#">lorem ipsum sit amet dolor lorem ipsum sit amet dolor lorem ipsum</a>
-      </p>
-    </div><!-- number 2 -->
-    <div class="col-lg-12"><hr class="lb-0"></div>
-
-    <div class="col-lg-4 col-sm-4 p-1">
-      <div class="border-0 rounded-0">
-        <a href="#"><img class="img-fluid headline-img-sm shade" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/28/3226/daun_ga,bir.jpg" alt="..."></a>
-      </div>
-    </div>
-    <div class="col-lg-8 col-sm-8 mt-1">            
-      <span class="mt-0 sub-head-cat"><a href="#" class="sub-head-box">NASIONAL</a></span> 
-      <span class=" mt-0 sub-head-date"><i class="fas fa-clock"></i> 12 September</span>           
-      <p class="mt-2">
-        <a class="sub-head-18" href="#">lorem ipsum sit amet dolor lorem ipsum sit amet dolor lorem ipsum</a>
-      </p>
-    </div><!-- number 2 -->
-    <div class="col-lg-12"><hr class="lb-0"></div>
-
-    <div class="col-lg-4 col-sm-4 p-1">
-      <div class="border-0 rounded-0">
-        <a href="#"><img class="img-fluid headline-img-sm shade" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/28/3226/daun_ga,bir.jpg" alt="..."></a>
-      </div>
-    </div>
-    <div class="col-lg-8 col-sm-8 mt-1">            
-      <span class="mt-0 sub-head-cat"><a href="#" class="sub-head-box">NASIONAL</a></span> 
-      <span class=" mt-0 sub-head-date"><i class="fas fa-clock"></i> 12 September</span>           
-      <p class="mt-2">
-        <a class="sub-head-18" href="#">lorem ipsum sit amet dolor lorem ipsum sit amet dolor lorem ipsum</a>
-      </p>
-    </div><!-- number 2 -->
-    <div class="col-lg-12"><hr class="lb-0"></div>
-
-    <div class="col-lg-4 col-sm-4 p-1">
-      <div class="border-0 rounded-0">
-        <a href="#"><img class="img-fluid headline-img-sm shade" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/28/3226/daun_ga,bir.jpg" alt="..."></a>
-      </div>
-    </div>
-    <div class="col-lg-8 col-sm-8 mt-1">            
-      <span class="mt-0 sub-head-cat"><a href="#" class="sub-head-box">NASIONAL</a></span> 
-      <span class=" mt-0 sub-head-date"><i class="fas fa-clock"></i> 12 September</span>           
-      <p class="mt-2">
-        <a class="sub-head-18" href="#">lorem ipsum sit amet dolor lorem ipsum sit amet dolor lorem ipsum</a>
-      </p>
-    </div><!-- number 2 -->
-    <div class="col-lg-12"><hr class="lb-0"></div>
-
-    <div class="col-lg-4 col-sm-4 p-1">
-      <div class="border-0 rounded-0">
-        <a href="#"><img class="img-fluid headline-img-sm shade" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/28/3226/daun_ga,bir.jpg" alt="..."></a>
-      </div>
-    </div>
-    <div class="col-lg-8 col-sm-8 mt-1">            
-      <span class="mt-0 sub-head-cat"><a href="#" class="sub-head-box">NASIONAL</a></span> 
-      <span class=" mt-0 sub-head-date"><i class="fas fa-clock"></i> 12 September</span>           
-      <p class="mt-2">
-        <a class="sub-head-18" href="#">lorem ipsum sit amet dolor lorem ipsum sit amet dolor lorem ipsum</a>
-      </p>
-    </div><!-- number 2 -->
-    <div class="col-lg-12"><hr class="lb-0"></div>
-
-    <div class="col-lg-4 col-sm-4 p-1">
-      <div class="border-0 rounded-0">
-        <a href="#"><img class="img-fluid headline-img-sm shade" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/28/3226/daun_ga,bir.jpg" alt="..."></a>
-      </div>
-    </div>
-    <div class="col-lg-8 col-sm-8 mt-1">            
-      <span class="mt-0 sub-head-cat"><a href="#" class="sub-head-box">NASIONAL</a></span> 
-      <span class=" mt-0 sub-head-date"><i class="fas fa-clock"></i> 12 September</span>           
-      <p class="mt-2">
-        <a class="sub-head-18" href="#">lorem ipsum sit amet dolor lorem ipsum sit amet dolor lorem ipsum</a>
-      </p>
-    </div><!-- number 2 -->
-    <div class="col-lg-12"><hr class="lb-0"></div>
-
-    <div class="col-lg-4 col-sm-4 p-1">
-      <div class="border-0 rounded-0">
-        <a href="#"><img class="img-fluid headline-img-sm shade" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/28/3226/daun_ga,bir.jpg" alt="..."></a>
-      </div>
-    </div>
-    <div class="col-lg-8 col-sm-8 mt-1">            
-      <span class="mt-0 sub-head-cat"><a href="#" class="sub-head-box">NASIONAL</a></span> 
-      <span class=" mt-0 sub-head-date"><i class="fas fa-clock"></i> 12 September</span>           
-      <p class="mt-2">
-        <a class="sub-head-18" href="#">lorem ipsum sit amet dolor lorem ipsum sit amet dolor lorem ipsum</a>
-      </p>
-    </div><!-- number 2 -->
-    <div class="col-lg-12"><hr class="lb-0"></div>
-
-    <div class="col-lg-4 col-sm-4 p-1">
-      <div class="border-0 rounded-0">
-        <a href="#"><img class="img-fluid headline-img-sm shade" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/28/3226/daun_ga,bir.jpg" alt="..."></a>
-      </div>
-    </div>
-    <div class="col-lg-8 col-sm-8 mt-1">            
-      <span class="mt-0 sub-head-cat"><a href="#" class="sub-head-box">NASIONAL</a></span> 
-      <span class=" mt-0 sub-head-date"><i class="fas fa-clock"></i> 12 September</span>           
-      <p class="mt-2">
-        <a class="sub-head-18" href="#">lorem ipsum sit amet dolor lorem ipsum sit amet dolor lorem ipsum</a>
-      </p>
-    </div><!-- number 2 -->
-    <div class="col-lg-12"><hr class="lb-0"></div>
-
-    <div class="col-lg-4 col-sm-4 p-1">
-      <div class="border-0 rounded-0">
-        <a href="#"><img class="img-fluid headline-img-sm shade" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/28/3226/daun_ga,bir.jpg" alt="..."></a>
-      </div>
-    </div>
-    <div class="col-lg-8 col-sm-8 mt-1">            
-      <span class="mt-0 sub-head-cat"><a href="#" class="sub-head-box">NASIONAL</a></span> 
-      <span class=" mt-0 sub-head-date"><i class="fas fa-clock"></i> 12 September</span>           
-      <p class="mt-2">
-        <a class="sub-head-18" href="#">lorem ipsum sit amet dolor lorem ipsum sit amet dolor lorem ipsum</a>
-      </p>
-    </div><!-- number 2 -->
-    <div class="col-lg-12"><hr class="lb-0"></div>
+    
+          <?php  
+            for ($x = 1; $x <= 15; $x++) {
+              echo "
+              <div class='col-lg-4 col-sm-4 p-1'>
+                  <a href='#'><img class='img-fluid headline-img-sm shade float-left' src='https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/28/3226/daun_ga,bir.jpg' alt='...'></a>
+              </div>
+              <div class='col-lg-8 col-sm-8 pl-2 mt-1'>            
+                <span class='sub-head-cat'><a href='#' class='sub-head-box'>NASIONAL</a></span> 
+                <span class='sub-head-date'><i class='fas fa-clock'></i> 12 September</span>        
+                <p class='mt-2'>
+                  <a class='sub-head-18' href='#'>lorem ipsum sit amet dolor lorem ipsum sit amet dolor lorem ipsum</a>
+                </p>
+              </div><!-- number 1 -->
+              <div class='col-lg-12'><hr class='lb-0'></div>       
+              ";
+            }
+          ?>  
 
   </div><!-- list berita -->
 

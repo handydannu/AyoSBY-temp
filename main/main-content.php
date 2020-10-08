@@ -1,6 +1,4 @@
 <div class="col-lg-6 col-sm-12 mt-3">
-    <!-- headline --> 
-    <?php include 'components/headline.php';?>
     <!-- berita terbaru -->        
     <?php include 'components/latestnews.php';?>
     <!-- BAGIAN PERSEBAYA TERBARU -->        

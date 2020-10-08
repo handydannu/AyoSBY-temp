@@ -16,14 +16,17 @@
   <!-- header -->
   <?php include 'components/header-area.php';?>
 </header>
-
 <!-- nav -->
-<?php include 'components/navbar.php';?>
+<?php include 'components/navbar.php';?>  
+  
+  <?php include 'main/sticky-kuping.php';?> 
 
   <div class="container"><!-- Page 1 -->     
 
     <div class="row"><!-- main Column -->    
 
+      <!-- big headline top -->
+      <?php include 'components/headline.php';?> 
       <!-- left sidebar --> 
       <?php include 'main/left-sidebar.php';?>       
       <!-- main content --> 

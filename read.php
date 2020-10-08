@@ -19,6 +19,8 @@
 
 <!-- nav -->
 <?php include 'components/navbar.php';?>
+  
+  <?php include 'main/sticky-kuping.php';?> 
 
   <div class="container"><!-- Page 1 -->     
 
@@ -27,7 +29,7 @@
       <!-- left sidebar   --> 
       <?php //include 'main/left-sidebar.php';?>   
       <!-- main content --> 
-      <?php include 'views/read.php';?>      
+      <?php include 'views/newslist.php';?>      
       <!-- right sidebar --> 
       <?php include 'main/right-sidebar.php';?>
 

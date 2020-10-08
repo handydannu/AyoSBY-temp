@@ -56,6 +56,9 @@
 body {
 	padding-top: 75px;
 	font-family: roboto condensed,sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-smooth: auto;
+
 }
 .list-car li{
   background: #F0931D;
@@ -196,7 +199,25 @@ a:hover{
 }
 .badge-hl{
   color: #fff;
-  background-color: #F0931D;  
+  background-color: #35579f;  
+}
+
+/* sticky ads kuping */
+.sidebar-kiri {
+    display: inline;
+    position: absolute;
+    left: 20px;
+    margin-left: 0px;
+    width: 150px;
+    top: 0;
+}
+.sidebar-kanan {
+    display: inline;
+    /* margin-left: 1200px; */
+    right: 20px;
+    position: absolute;
+    width: 150px;
+    top: 0;
 }
 
 /* Link rotate */
@@ -527,8 +548,8 @@ h3 a{
 /*ukuran gambar */
 .headline-img{
 	width: 640px;
-	height: 280px;
-	border-bottom: 8px solid #35579f;
+	height: 328px;
+	border-bottom: 5px solid #f7941d;
 }
 .headline-img-thumb{
 	width: 240px;
@@ -536,7 +557,7 @@ h3 a{
 	border-bottom: 8px solid #35579f;
 }
 .headline-img-med{
-	width: 320px;
+	width: 340px;
 	height: 160px;
 	border-bottom: 5px solid #f7941d;
 }
@@ -624,6 +645,29 @@ span.list-numb{
 	-moz-box-shadow: 1px 1px 3px 0px rgba(163,163,163,0.75);
 	box-shadow: 1px 1px 3px 0px rgba(163,163,163,0.75);
 } 
+
+/* news ticker */
+.news {
+    width: 350px}
+
+.news-scroll a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #000;
+    -webkit-font-smoothing: antialiased;
+}.news-scroll a:hover {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #f7941d;
+}
+.dot {
+    height: 12px;
+    width: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    background-color: rgb(207, 23, 23);
+    display: inline-block
+}
 
 /* ads */
 .ads-disp{
@@ -769,3 +813,5 @@ hr.new1 {
     position:absolute;
 }
 /* END CSS AYOSURABAYA */
+
+
