@@ -1,4 +1,3 @@
-
   <div class="sidebar-sticky fading">
     <div class="sidebar-kiri">
     <?php include 'components/banner-ver-2.php';?>

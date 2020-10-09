@@ -3,17 +3,15 @@
           <a class="roll-link" href="#"><span data-title="LAINNYA >>"><i class="fas fa-comments"></i> AYONETIZEN</span></a>
         </h4>
         <div class="rounded-0 mr-2">
-          <div class=" shade">
-            <a href="#">
-              <img class="img-fluid headline-img-thumb" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/25/3176/jasad-muhammad-affan-hariyanto-ditemukan-di-tanah-kosong.jpg" alt="Card image cap">
-            </a>
-          </div>
-          <div>
+          <a href="#">
+              <img class="img-fluid headline-img-thumb" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/25/3176/jasad-muhammad-affan-hariyanto-ditemukan-di-tanah-kosong.jpg" alt="Card image cap">            
+            <div>
             <span class="mt-0 sub-head-date"><i class="fas fa-clock"></i> 12 September</span>        
-              <p>
-                <a class="sub-head-20" href="#">lorem ipsum sit amet dolor lorem ipsum sit</a>
+              <p class="sub-head-20">
+               lorem ipsum sit amet dolor lorem ipsum sit
               </p>
-          </div>
+            </div>
+          </a>
 
           <ul class="list-group list-group-flush left-orange-title mt-3">
             <li class="pop-list">

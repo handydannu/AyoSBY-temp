@@ -1,19 +1,36 @@
 <div class="col-lg-6 col-sm-12 mt-3">
 
   <h4 class="pt-2 mml-1">
-    <span data-title="CARI BERITA"><i class="fas fa-search"></i> CARI BERITA</span>
+    <span data-title="INDEKS BERITA"><i class="fas fa-list-ol"></i> INDEKS BERITA</span>
   </h4>
 
-  <div class="input-group mb-3 mml-1" style="background-color: #e6e6e6;padding: 10px;">
-    <input type="text" class="form-control" placeholder="Masukkan kata kunci" aria-label="Masukkan kata kunci">
-    <div class="input-group-append">
-      <button class="btn btn-surabaya" type="button">CARI</button>
+  <form class="mb-2 mml-1" style="background-color: #e6e6e6;padding: 10px 20px;">
+    <div class="form-row align-items-center">
+      <div class="col-sm-4 mt-1">     
+         <div class="input-group">
+            <input placeholder="Pilih tanggal" type="text" class="form-control datepicker rounded-0" name="tgl_indeks">
+            <div class="input-group-append">
+              <span class="input-group-text rounded-0" id="tgl_indeks"><i class="far fa-calendar-alt"></i></span>
+            </div>
+          </div>
+      </div>
+      <div class="col-sm-6 mt-1">        
+          <select class="form-control rounded-0"><i class="fas fa-list-alt"></i>
+            <option selected>Pilih kategori</option>
+            <option>Surabaya</option>
+            <option>Video</option>
+            <option>Foto</option>
+          </select>
+      </div>
+      <div class="col-sm-2 mt-1">      
+        <button type="submit" class="btn btn-surabaya rounded-0">PILIH</button>
+      </div>
     </div>
-  </div>
+  </form>
 
-    <h5>
-      HASIL PENCARIAN "surabaya"
-    </h5>
+  <h5>
+    INDEKS BERITA TANGGAL "21 Agustus 2020"
+  </h5>
   <hr class="new1">
 
   <div class="row">

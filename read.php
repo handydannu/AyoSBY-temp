@@ -29,7 +29,7 @@
       <!-- left sidebar   --> 
       <?php //include 'main/left-sidebar.php';?>   
       <!-- main content --> 
-      <?php include 'views/read.php';?>      
+      <?php include 'pages/management.php';?>      
       <!-- right sidebar --> 
       <?php include 'main/right-sidebar.php';?>
 

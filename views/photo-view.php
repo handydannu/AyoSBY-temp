@@ -34,6 +34,14 @@
           </script>
           <script async src="https://static.addtoany.com/menu/page.js"></script>
 
+
+          <div class="mt-2 mb-1">  
+            <i class="fas fa-pen fa-xs"></i> PENULIS
+            <span class="img-photographer">Juan Pablo</span>
+              &nbsp;&nbsp;<i class="fas fa-user-clock"></i> EDITOR
+            <span class="img-photographer">Don Montoya</span>
+          </div>
+          
           <!-- photo carousel -->
           <div id="carousel-photo" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators list-car">
@@ -61,10 +69,10 @@
               <span class="sr-only">Next</span>
             </a>
           </div><!-- photo carousel -->
-
-          <div class="text-center dashing mt-1 mb-1">
-            <span class="img-caption">Daun Hijau Dari America</span>/<span class="img-photographer">Istimewa</span>
-          </div>
+          
+          <span class="img-caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat tincidunt nisi vel molestie. Aliquam quis ornare purus. Praesent id nulla vel ex finibus laoreet</span>
+            &nbsp;|&nbsp;<i class="fas fa-camera-retro fa-xs"></i>
+          <span class="img-photographer">Istimewa</span>
 
           <section>
           <p><strong>Surabaya</strong>- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat tincidunt nisi vel molestie. Aliquam quis ornare purus. Praesent id nulla vel ex finibus laoreet. Maecenas iaculis commodo leo sit amet elementum. Nullam rutrum justo in mi porta maximus. Maecenas vulputate, diam ac dapibus pellentesque, massa orci aliquet felis, quis auctor purus massa ut risus. Vestibulum vulputate hendrerit augue, ac lobortis dui. Phasellus eget pulvinar orci. Vestibulum a ipsum quis mauris vehicula elementum a in dolor.</p>
@@ -96,92 +104,10 @@
         <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0&appId=664427773749378&autoLogAppEvents=1" nonce="HXZkYtnd"></script>
         <div class="fb-comments" data-href="http://ayosurabaya.com/" data-numposts="5" data-width=""></div>
 
-      <!-- BAGIAN BERITA TERKAIT -->
-            <h4 class="pt-2 mml-1">
-              <a class="roll-link" href="#"><span data-title="LAINNYA >>"><i class="far fa-newspaper"></i> PHOTO LAINNYA</span></a>
-            </h4>
-
-        <div class="row">
-          <div class="col-3 p-1">
-              <a href="#"><img class="img-fluid headline-img-thumb shade" src="http://placehold.it/640x380" alt="Card image cap"></a>
-              <div>
-                <span class="mt-0 sub-head-date"><i class="fas fa-clock"></i> 12 September</span>        
-                <p>
-                  <a class="sub-head-14" href="#">lorem ipsum sit amet dolor lorem ipsum sit</a>
-                </p>
-              </div>
-          </div>
-
-          <div class="col-3 p-1">
-              <a href="#"><img class="img-fluid headline-img-thumb shade" src="http://placehold.it/640x380" alt="Card image cap"></a>
-              <div>
-                <span class="mt-0 sub-head-date"><i class="fas fa-clock"></i> 12 September</span>        
-                <p>
-                  <a class="sub-head-14" href="#">lorem ipsum sit amet dolor lorem ipsum sit</a>
-                </p>
-              </div>
-          </div>
-
-          <div class="col-3 p-1">
-              <a href="#"><img class="img-fluid headline-img-thumb shade" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/29/3264/whatsapp_image_2020-09-28_at_11.59.36.jpeg" alt="Card image cap"></a>
-              <div>
-                <span class="mt-0 sub-head-date"><a class="sub-head-date" href="#">  <i class="fas fa-clock"></i> 12 September</a></span>       
-                <p>
-                  <a class="sub-head-14" href="#">lorem ipsum sit amet dolor lorem ipsum sit</a>
-                </p>
-              </div>
-          </div>
-
-          <div class="col-3 p-1">
-              <a href="#"><img class="img-fluid headline-img-thumb shade" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/29/3264/whatsapp_image_2020-09-28_at_11.59.36.jpeg" alt="Card image cap"></a>
-              <div>
-                <span class="mt-0 sub-head-date"><a class="sub-head-date" href="#">  <i class="fas fa-clock"></i> 12 September</a></span>       
-                <p>
-                  <a class="sub-head-14" href="#">lorem ipsum sit amet dolor lorem ipsum sit</a>
-                </p>
-              </div>
-          </div>
-      </div>
-      <div class="row">
-          <div class="col-3 p-1">
-              <a href="#"><img class="img-fluid headline-img-thumb shade" src="http://placehold.it/640x380" alt="Card image cap"></a>
-              <div>
-                <span class="mt-0 sub-head-date"><i class="fas fa-clock"></i> 12 September</span>        
-                <p>
-                  <a class="sub-head-14" href="#">lorem ipsum sit amet dolor lorem ipsum sit</a>
-                </p>
-              </div>
-          </div>
-
-          <div class="col-3 p-1">
-              <a href="#"><img class="img-fluid headline-img-thumb shade" src="http://placehold.it/640x380" alt="Card image cap"></a>
-              <div>
-                <span class="mt-0 sub-head-date"><i class="fas fa-clock"></i> 12 September</span>        
-                <p>
-                  <a class="sub-head-14" href="#">lorem ipsum sit amet dolor lorem ipsum sit</a>
-                </p>
-              </div>
-          </div>
-
-          <div class="col-3 p-1">
-              <a href="#"><img class="img-fluid headline-img-thumb shade" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/29/3264/whatsapp_image_2020-09-28_at_11.59.36.jpeg" alt="Card image cap"></a>
-              <div>
-                <span class="mt-0 sub-head-date"><a class="sub-head-date" href="#">  <i class="fas fa-clock"></i> 12 September</a></span>       
-                <p>
-                  <a class="sub-head-14" href="#">lorem ipsum sit amet dolor lorem ipsum sit</a>
-                </p>
-              </div>
-          </div>
-
-          <div class="col-3 p-1">
-              <a href="#"><img class="img-fluid headline-img-thumb shade" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/29/3264/whatsapp_image_2020-09-28_at_11.59.36.jpeg" alt="Card image cap"></a>
-              <div>
-                <span class="mt-0 sub-head-date"><a class="sub-head-date" href="#">  <i class="fas fa-clock"></i> 12 September</a></span>       
-                <p>
-                  <a class="sub-head-14" href="#">lorem ipsum sit amet dolor lorem ipsum sit</a>
-                </p>
-              </div>
-          </div>
-      </div><!-- END BERITA TERKAIT -->
+        <!-- berita terkait -->
+        <h4 class="pt-2 mml-1">
+          <span data-title="LAINNYA >>"><i class="far fa-newspaper"></i> PHOTO LAINNYA</span>
+        </h4>
+        <?php include 'components/terkait.php';?>
 
 </div><!-- end col read -->

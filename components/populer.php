@@ -1,5 +1,5 @@
 <h4 class="pt-3 mml-2">
-  <a class="roll-link" href="#"><span data-title="LAINNYA >>"><i class="fas fa-fire-alt"></i> TERPOPULER</span></a>
+  <span data-title="LAINNYA >>"><i class="fas fa-fire-alt"></i> TERPOPULER</span>
   </h4>
   <ul class="list-group list-group-flush mt-1">
     <li class="list-group-item">
@@ -24,10 +24,10 @@
       <span class="list-numb">7</span><a href="#" class="sub-head-16"> surabaya dinobatkan sebagai kota paling bersih di indonesia</a>
     </li>
     <li class="list-group-item">
-      <span class="list-numb">8</span><a href="#" class="sub-head-16"> surabaya dinobatkan sebagai kota paling bersih di indonesia</a>
+      <span class="list-numb">8</span><a href="#" class="sub-head-16"> Bioskop di Kota Bandung Buka Lagi</a>
     </li>
     <li class="list-group-item">
-      <span class="list-numb">9</span><a href="#" class="sub-head-16"> surabaya dinobatkan sebagai kota paling bersih di indonesia</a>
+      <span class="list-numb">9</span><a href="#" class="sub-head-16"> Oknum Pendemo Omnibus Law Rusak Fasilitas, Kerugian Capai Rp300 juta</a>
     </li>
     <li class="list-group-item">
       <span class="list-numb">10</span><a href="#" class="sub-head-16"> surabaya dinobatkan sebagai kota paling bersih di indonesia</a>
