@@ -1,6 +1,5 @@
 <!-- sidebar kiri hilang kalau mobile -->
-<div class="col-lg-2 col-sm-12 mt-3 fading">
-  
+<div class="col-lg-2 col-sm-12 mt-3 fading">  
   <!-- banner vertical -->          
   <?php include 'components/banner-ver.php';?>  
   <!-- latest inovasi -->
