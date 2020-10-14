@@ -1,0 +1,139 @@
+/* ==========================================================================
+   @style BlueCore Theme for kominfo.go.id
+   @page Maintenance, Under Construction
+   @author M. Riza Alifi
+   @contact alifiharafi[at]gmail[dot]com
+   @twitter [at]alifiharafi
+   @blog alifiharafi[dot]com, digid[dot]web[dot]id
+   ========================================================================== */
+
+html, body {
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	background: #123F73;
+	color: #FFF;
+}
+
+p {
+	margin: 0;
+}
+
+header {	
+	padding: 25px 0 15px;
+	border-bottom: 1px solid #093363;
+}
+
+header .container {
+	text-align: center;
+}
+
+h2.logo-desc {
+	font-size: 1.3em;
+	font-weight: bold;
+	line-height: 1.2em;
+}
+
+#main-container {
+	padding: 0 7px 7px;
+	border-top: 1px solid #224a79;
+}
+
+.info-maintenance {
+	text-align: center;
+}
+
+.ico-maintenance {
+	padding: 0;
+	margin: 25px 0 25px;
+	font-size: 12.0em !important;
+}
+
+h2.ico-desc {
+	padding: 0 0 25px;
+	margin: 0;
+	font-size: 2.0em;
+}
+
+.info-maintenance p {
+	font-size: 1.2em;
+	line-height: 1.6em;
+}
+
+footer .footer-menu {
+	padding: 15px 0 15px;
+	border-bottom: 1px solid #093363;
+}
+
+.ftr-social-feed {
+	text-align: center;
+	margin: 25px 0 15px;
+}
+
+.ftr-social-feed ul {
+	display: inline-block;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.ftr-social-feed ul li {
+	display: inline-block;
+}
+
+.ftr-social-feed ul a {
+	display: inline-block;
+	width: 1.8em;
+	height: 1.8em;
+	background: #113d63;
+	font-size: 1.6em;
+    border-radius: 50%;
+	text-align: center;
+	padding: 0.2em 0 0;
+	color: #FFF;
+}
+
+.ftr-social-feed ul .ftr-ico-fb:hover {
+	background: #164D8D;
+}
+
+.ftr-social-feed ul .ftr-ico-tw:hover {
+	background: #55ACEE;
+}
+
+.footer-copyright {
+	padding: 15px;
+	width: 100%;
+	font-size: 0.9em;
+	text-align: center;
+	border-top: 1px solid #224a79;
+}
+
+a.lightblue {
+	color: #62BFEA;
+}
+
+.strong {
+	font-weight: bold;
+}
+
+@media (max-width: 991px) {
+	.ico-maintenance {
+		font-size: 9em !important;
+	}
+	.footer-menu {
+		text-align: center;
+	}
+}
+
+@media (max-width: 240px) {
+	.ico-maintenance {
+		font-size: 8em !important;
+	}
+
+	.search-form .src-input {
+		width: 82%;
+	}
+
+	.search-form button {
+		width: 18%;
+	}
+}

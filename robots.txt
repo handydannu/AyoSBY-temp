@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /assets
+Disallow: /index
+Disallow: /?q=
+Disallow: /?rever=
+Disallow: /?site_view=
+#Sitemap: http://www.ayobandung.com/sitemap.xml
