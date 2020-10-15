@@ -71,7 +71,7 @@
                                 <?php echo $p['post_title']; ?> 
                                 <!-- <div class="view-visitor">
                                   Dibaca <?php //echo $p['hits']; ?> Kali
-                                </div> -->
+                                </div> 
                               </li>
                             </a>
                             <?php } ?>
