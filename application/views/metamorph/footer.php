@@ -4,7 +4,7 @@
         <div class="col-lg-12 col-md-12 col-sm-12 text-white">
             <a class="sub-footer-12 mr-2 ml-2" href="https://www.facebook.com/ayosurabayacom/"><i class="fab fa-facebook-f fa-2x"></i></a> 
             <a class="sub-footer-12 mr-2 ml-2" href="https://twitter.com/ayosurabayacom"><i class="fab fa-twitter fa-2x"></i></a> 
-            <a class="sub-footer-12 mr-2 ml-2" href="https://www.instagram.com/ayosurabaya_official"><i class="fab fa-instagram fa-2x"></i></a> 
+            <a class="sub-footer-12 mr-2 ml-2" href="https://www.instagram.com/ayosurabaya_official" title="Follow @<?php echo $this->config->item('social_acc')['instagram']; ?> on Instagram><i class="fab fa-instagram fa-2x"></i></a> 
             <a class="sub-footer-12 mr-2 ml-2" href="https://www.youtube.com/channel/UCPQMqqU-H6b_6hCEaREqvmw"><i class="fab fa-youtube fa-2x"></i></a> 
             <a class="sub-footer-12 mr-2 ml-2" href="https://www.ayosurabaya.com/rss"><i class="fas fa-rss fa-2x"></i></a>
         </div>        
@@ -30,16 +30,16 @@
        <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12">
             <p class="text-white">
-              <a class="sub-footer-12" href="#">About Us</a> •
-              <a class="sub-footer-12" href="#">management & editorial</a> •
-              <a class="sub-footer-12" href="#">terms & conditions</a> •
-              <a class="sub-footer-12" href="#">privacy policy</a> •
-              <a class="sub-footer-12" href="#">advertise</a> •
-              <a class="sub-footer-12" href="#">media partner</a> •
-              <a class="sub-footer-12" href="#">carrer</a> •
-              <a class="sub-footer-12" href="#">contact us</a> •
-              <a class="sub-footer-12" href="#">rss</a> •
-              <a class="sub-footer-12" href="#" target="_blank"><span class="ayo-orange">ayo media network</span></a> •
+              <a class="sub-footer-12" href="<?php echo site_url(); ?>about-us">About Us</a> •
+              <a class="sub-footer-12" href="<?php echo site_url(); ?>management-editorial">management & editorial</a> •
+              <a class="sub-footer-12" href="<?php echo site_url(); ?>terms-conditions">terms & conditions</a> •
+              <a class="sub-footer-12" href="<?php echo site_url(); ?>pedoman-media-siber">privacy policy</a> •
+              <a class="sub-footer-12" href="<?php echo site_url(); ?>advertise">advertise</a> •
+              <a class="sub-footer-12" href="<?php echo site_url(); ?>media-partner">media partner</a> •
+              <a class="sub-footer-12" href="https://ayobandung.com/carrer" target="_blank">carrer</a> •
+              <a class="sub-footer-12" href="https://ayobandung.com/contact-us" target="_blank">contact us</a> •
+              <a class="sub-footer-12" href="<?php echo site_url(); ?>rss">rss</a> •
+              <a class="sub-footer-12" href="http://ayomedianetwork.com/" target="_blank"><span class="ayo-orange">ayo media network</span></a> •
               <a class="sub-footer-12" href="#">© 2020</a>
             </p>
         </div>

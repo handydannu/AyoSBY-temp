@@ -1,11 +1,10 @@
   <!-- Footer -->
   <footer class="pt-3 bg-dark footer-line">  
-  <?php include 'components/footer.php';?>
+  <?php $this->load->view($this->config->item('template_name') . 'footer'); ?>
   </footer>
 
-
-	<!-- javascript --> 
-  <?php include 'components/scripts-footer.php';?>
+  <!-- javascript --> 
+  <?php $this->load->view($this->config->item('template_name') . 'scripts-footer'); ?>
  
 </body>
 </html>

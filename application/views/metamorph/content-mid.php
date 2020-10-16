@@ -1,10 +1,10 @@
 <div class="col-lg-6 col-sm-12 mt-3">
     <!-- berita terbaru -->        
-    <?php include 'components/latestnews.php';?>
+  	<?php $this->load->view($this->config->item('template_name') . 'latest-news'); ?>
     <!-- BAGIAN PERSEBAYA TERBARU -->        
-    <?php include 'components/persebaya.php';?>        
+  	<?php $this->load->view($this->config->item('template_name') . 'latest-persebaya'); ?>      
     <!-- hot news -->              
-    <?php include 'components/hotnews.php';?>         
+  	<?php $this->load->view($this->config->item('template_name') . 'latest-hotnews'); ?>        
     <!-- gaya hidup --> 
-    <?php include 'components/gayahidup.php';?>     
+  	<?php $this->load->view($this->config->item('template_name') . 'latest-gayahidup'); ?>    
 </div>

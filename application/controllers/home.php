@@ -98,7 +98,7 @@ class Home extends CI_Controller
 		// $c['jatim']						= $this->covid19->provinsi();
 		// $c['indonesia']					= $this->covid19->info();
 
-		$this->load->view($this->config->item('template_name') . 'home', $c);
+		$this->load->view($this->config->item('template_name') . 'main-home', $c);
 	}
 }
  

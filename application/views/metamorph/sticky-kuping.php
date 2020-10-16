@@ -1,8 +1,8 @@
   <div class="sidebar-sticky fading">
     <div class="sidebar-kiri">
-    <?php include 'components/banner-ver-2.php';?>
+  	<?php $this->load->view($this->config->item('template_name') . 'banner-ver-2'); ?>
     </div>
     <div class="sidebar-kanan">
-    <?php include 'components/banner-ver-3.php';?>
+  	<?php $this->load->view($this->config->item('template_name') . 'banner-ver-3'); ?>
     </div>
   </div>

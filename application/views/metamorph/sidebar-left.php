@@ -1,13 +1,13 @@
 <!-- sidebar kiri hilang kalau mobile -->
 <div class="col-lg-2 col-sm-12 mt-3 fading">  
-  <!-- banner vertical -->          
-  <?php include 'components/banner-ver.php';?>  
+  <!-- banner vertical -->           
+  <?php $this->load->view($this->config->item('template_name') . 'banner-ver'); ?> 
   <!-- latest inovasi -->
-  <?php include 'components/inovasi-latest.php';?>          
+  <?php $this->load->view($this->config->item('template_name') . 'latest-inovasi'); ?>          
   <!-- latest netizen -->
-  <?php include 'components/netizen-latest.php';?>   
+  <?php $this->load->view($this->config->item('template_name') . 'latest-netizen'); ?>    
   <!-- banner vertical sticky -->        
   <div class="sidebar-sticky mt-4">
-    <?php include 'components/banner-ver.php';?>
+    <?php $this->load->view($this->config->item('template_name') . 'banner-ver'); ?> 
   </div>
 </div><!-- sidebar kiri -->

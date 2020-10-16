@@ -1,17 +1,17 @@
-<?php include 'main-top.php';?> 
+<?php $this->load->view($this->config->item('template_name') . 'main-top'); ?>
 
   <div class="container"><!-- Page 1 -->     
 
     <div class="row"><!-- main Column -->    
 
       <!-- big headline top -->
-      <?php include 'components/headline.php';?> 
+      <?php $this->load->view($this->config->item('template_name') . 'headline'); ?> 
       <!-- left sidebar --> 
-      <?php include 'main/left-sidebar.php';?>       
+      <?php $this->load->view($this->config->item('template_name') . 'sidebar-left'); ?>       
       <!-- main content --> 
-      <?php include 'main/main-content.php';?>
+      <?php $this->load->view($this->config->item('template_name') . 'content-mid'); ?>
       <!-- right sidebar --> 
-      <?php include 'main/right-sidebar.php';?> 
+      <?php $this->load->view($this->config->item('template_name') . 'sidebar-right'); ?>
 
     </div><!-- /.row utama -->
     
@@ -20,11 +20,11 @@
   <!-- container section 2 -->
   <div class="container">  
     <!-- section gambar -->      
-    <?php include 'components/photo-latest.php';?>
+    <?php $this->load->view($this->config->item('template_name') . 'latest-photo'); ?>
     <!-- section banner horizontal --> 
-    <?php include 'components/banner-hor.php';?>
+    <?php $this->load->view($this->config->item('template_name') . 'banner-hor'); ?>
     <!-- section 3 kategori -->      
-    <?php include 'components/below-cat.php';?>
+    <?php $this->load->view($this->config->item('template_name') . 'latest-belowcategory'); ?>
   </div><!-- container section 2 -->
 
-  <?php include 'main-bottom.php';?> 
+<?php $this->load->view($this->config->item('template_name') . 'main-bottom'); ?> 
