@@ -138,7 +138,8 @@ class Read extends CI_Controller {
 
 		// Sidebar Content
 		// $c['piala_dunia']				= $this->article_model->get_recent_by_category(82, 5);
-$c['netizen']				= $this->article_model->get_recent_by_category(7, 5);
+		$c['netizen']				= $this->article_model->get_recent_by_category(7, 8);
+		$c['wisata']				= $this->article_model->get_recent_by_category(27, 6);
 		// Set Visitor Hit
 		date_default_timezone_set('Asia/Jakarta');
         $data_hit = array(
@@ -149,7 +150,7 @@ $c['netizen']				= $this->article_model->get_recent_by_category(7, 5);
         );
         $this->common_model->set_hit($data_hit); // temporarily not checked if it is working or not? return value has been prepared
 
-		$this->load->view($this->config->item('template_name') . 'single-article', $c);
+		$this->load->view($this->config->item('template_name') . 'view-content', $c);
 	}
 }
 

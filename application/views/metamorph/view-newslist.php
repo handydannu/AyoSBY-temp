@@ -1,57 +1,78 @@
-<div class="col-lg-8 col-sm-12 mt-3">
+<?php $this->load->view($this->config->item('template_name') . 'main-top'); ?>
 
-  <!-- breadcrumb -->
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb breadcrumb-arrow p-0">
-      <li class="breadcrumb-item"><a href="#" class="text-uppercase pl-3">Home</a></li>
-      <li class="breadcrumb-item pl-0"><a href="#" class="text-uppercase">Library</a></li>
-      <li aria-current="page" class="breadcrumb-item pl-0 active text-uppercase pl-4">surabaya</li>
-    </ol>
-  </nav><!-- breadcrumb -->
+  <div class="container"><!-- Page 1 -->     
 
-    <h4 class="pt-2 mml-1">
-      <a class="roll-link" href="#"><span data-title="LAINNYA >>"><i class="far fa-newspaper"></i> PERSEBAYA</span></a>
-    </h4>
+    <div class="row"><!-- main Column -->    
 
-  <div class="row">
-    <!-- list berita -->
-    
-          <?php  
-            for ($x = 1; $x <= 15; $x++) {
-              echo "
-              <div class='col-lg-4 col-sm-4 p-1'>
-                  <a href='#'><img class='img-fluid headline-img-sm shade float-left' src='https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/28/3226/daun_ga,bir.jpg' alt='...'></a>
-              </div>
-              <div class='col-lg-8 col-sm-8 pl-2 mt-1'>            
-                <span class='sub-head-cat'><a href='#' class='sub-head-box'>NASIONAL</a></span> 
-                <span class='sub-head-date'><i class='fas fa-clock'></i> 12 September</span>        
-                <p class='mt-2'>
-                  <a class='sub-head-18' href='#'>lorem ipsum sit amet dolor lorem ipsum sit amet dolor lorem ipsum</a>
-                </p>
-              </div><!-- number 1 -->
-              <div class='col-lg-12'><hr class='lb-0'></div>       
-              ";
-            }
-          ?>  
+      <div class="col-lg-8 col-sm-12 mt-3">
 
-  </div><!-- list berita -->
+      <!-- breadcrumb -->
+      <nav aria-label="breadcrumb" style="background-color: #e2e0e0; padding: 10px 15px; margin-left: -15px;">
+        <a class="sub-head-20 ayo-orange text-uppercase" href="<?php echo site_url(); ?>">Home</a>
+          <?php if($cmeta['parent_id'] > 0) { ?>
+          / <a class="sub-head-18 text-uppercase" href="<?php echo site_url($cmeta['data_parent']['category_link']); ?>"><?php echo $cmeta['data_parent']['category_name']; ?></a>
+          / <a class="sub-head-18 text-uppercase" href="<?php echo site_url($cmeta['category_link']); ?>" class="active"><?php echo $cmeta['category_name']; ?></a>
+          <?php } else { ?>
+          / <a class="sub-head-18 text-uppercase" href="<?php echo site_url($cmeta['category_link']); ?>" class="active"><?php echo $cmeta['category_name']; ?></a>
+          <?php } ?>
+      </nav><!-- breadcrumb -->
 
-  <nav class="pagination-outer mt-3" aria-label="Page navigation">
-  <ul class="pagination">
-      <li class="page-item">
-          <a href="#" class="page-link" aria-label="SEBELUMNYA">
-              <span aria-hidden="true"><i class="fas fa-angle-double-left"></i></span>
-          </a>
-      </li>
-      <li class="page-item active"><a class="page-link" href="#">1</a></li>
-      <li class="page-item"><a class="page-link" href="#">2</a></li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item">
-          <a href="#" class="page-link" aria-label="SELANJUTNYA">
-              <span aria-hidden="true"><i class="fas fa-angle-double-right"></i></span>
-          </a>
-      </li>
-  </ul>
-  </nav>
+        <h4 class="pt-2 mml-1 text-uppercase">
+          <span data-title="LAINNYA >>"><i class="far fa-newspaper"></i> <?php echo $cmeta['category_name']; ?></span>
+        </h4>
 
-</div>
+      <div class="row">
+        <!-- list berita -->
+
+        <?php for($i = 0; $i < count($category); $i++) { ?>
+        <?php
+          $dc = content_time($category[$i]['post_date_created']);
+          $dp = id_time($category[$i]['post_date']);
+
+          $url = site_url('read') . '/' . $dc['year'] . '/' . $dc['month'] . '/' . $dc['day'] . '/' . $category[$i]['post_id'] . '/' . $category[$i]['slug'];
+          $url_img = $this->config->item('images_articles_uri') . $dc['year'] . '/' . $dc['month'] . '/' . $dc['day'] . '/' . $category[$i]['post_id'] . '/';
+        ?>
+        <div class="col-lg-4 col-sm-4 p-1">
+            <a href="<?php echo $url; ?>"><img class="img-fluid headline-img-sm shade float-left" src="<?php echo $url_img . $category[$i]['post_image_thumb']; ?>"></a>
+        </div>
+        <div class="col-lg-8 col-sm-8 pl-2 mt-1">            
+          <span class="sub-head-cat sub-head-box"><?php echo $cmeta['category_name']; ?></span> 
+          <span class="sub-head-date"><i class="fas fa-clock"></i> <?php echo $dp; ?></span>        
+          <p class="mt-2">
+            <a class="sub-head-18" href="<?php echo $url; ?>"><?php echo $category[$i]['post_title']; ?></a>
+          </p>
+        </div><!-- number 1 -->
+        <div class="col-lg-12"><hr class="lb-0"></div>        
+        <?php } ?>       
+                  
+
+      </div><!-- list berita -->
+
+      <nav class="pagination-outer mt-3" aria-label="Page navigation">
+      <ul class="pagination">
+          <li class="page-item">
+              <a href="#" class="page-link" aria-label="SEBELUMNYA">
+                  <span aria-hidden="true"><i class="fas fa-angle-double-left"></i></span>
+              </a>
+          </li>
+          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+          <li class="page-item"><a class="page-link" href="#">2</a></li>
+          <li class="page-item"><a class="page-link" href="#">3</a></li>
+          <li class="page-item">
+              <a href="#" class="page-link" aria-label="SELANJUTNYA">
+                  <span aria-hidden="true"><i class="fas fa-angle-double-right"></i></span>
+              </a>
+          </li>
+      </ul>
+      </nav>
+
+    </div>
+
+      <!-- right sidebar --> 
+    <?php $this->load->view($this->config->item('template_name') . 'sidebar-right-inner'); ?>
+
+  </div>
+
+</div><!-- /.container 1 -->
+
+<?php $this->load->view($this->config->item('template_name') . 'main-bottom'); ?> 

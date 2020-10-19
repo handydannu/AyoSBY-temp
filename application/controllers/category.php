@@ -139,8 +139,9 @@ class Category extends CI_Controller {
 		// Sidebar Content
 		$c['piala_dunia']			= $this->article_model->get_recent_by_category(82, 5);
 		$c['netizen']				= $this->article_model->get_recent_by_category(7, 5);
+		$c['wisata']				= $this->article_model->get_recent_by_category(27, 6);
 		
-		$this->load->view($this->config->item('template_name') . 'archive-category', $c);
+		$this->load->view($this->config->item('template_name') . 'view-newslist', $c);
 	}
 
 	/**

@@ -1,10 +1,13 @@
-<h4 class="pt-2 mml-1">
-    <span data-title="LAINNYA >>"><i class="far fa-newspaper"></i> BERITA TERBARU</span>
-</h4>
+   <div class="d-flex justify-content-between align-items-center breaking-news bg-white">
+        <div class="d-flex flex-row flex-grow-1 flex-fill justify-content-center bg-danger py-2 text-white px-1 news">
+          <span class="d-flex align-items-center"><i class="fas fa-fire"></i>&nbsp;BREAKING</span>
+        </div>
+        <div class="bg-light p-1">
 
-  <div class="row">
-    <?php // _d($recent); ?>
-      <?php foreach($recent as $r) { ?>
+        <marquee class="news-scroll mt-1" behavior="scroll" direction="left" scrollamount="7" onmouseover="this.stop();" onmouseout="this.start();"> 
+
+        <?php // _d($recent); ?>
+        <?php foreach($recent as $r) { ?>
         <?php
           // error_reporting(E_ALL);
           $dc = content_time($r['post_date_created']);
@@ -31,17 +34,9 @@
 
           // _d($url_img . $r['post_image_thumb']);
         ?>
-    <!-- list terbaru -->
-        <div class="col-lg-5 col-sm-5 p-1">
-            <a href="<?php echo $url; ?>"><img class="img-fluid headline-img-sm shade float-left" src="<?php echo $url_img . $r['post_image_thumb'] ?>" onerror="this.src='<?php echo base_url();?>assets/img/nophoto.png';" ></a>
-        </div>
-        <div class="col-lg-7 col-sm-7 pl-2 mt-1">            
-          <span class="sub-head-cat"><a href="<?php echo site_url($r['category_link']); ?>" class="sub-head-box"><?php echo $r['category_name']; ?></a></span> 
-          <span class="sub-head-date"><i class="fas fa-clock"></i> <?php echo $dp; ?></span>        
-          <p class="mt-2">
-            <a class="sub-head-18" href="<?php echo $url; ?>"><?php echo $r['post_title']; ?></a>
-          </p>
-        </div>
-        <div class="col-lg-12"><hr class="lb-0"></div>  
-        <?php } ?>
-  </div>
+          <span class="dot"></span> 
+          <a href="<?php echo $url; ?>"><?php echo $r['post_title']; ?></a> 
+          <?php } ?> 
+        </marquee></div>
+        
+    </div>

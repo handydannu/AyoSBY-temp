@@ -1,11 +1,16 @@
-<div class="col-lg-8 col-sm-12 mt-3"><!-- main col read -->
+<?php $this->load->view($this->config->item('template_name') . 'main-top'); ?>
+
+  <div class="container"><!-- Page main container-->     
+
+    <div class="row"><!-- main Column --> 
+
+    <div class="col-lg-8 col-sm-12 mt-3"><!-- main col read -->
 
     <!-- breadcrumb -->
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb breadcrumb-arrow p-0">
-        <li class="breadcrumb-item"><a href="#" class="text-uppercase pl-3">Home</a></li>
-        <li class="breadcrumb-item pl-0"><a href="#" class="text-uppercase">Library</a></li>
-        <li aria-current="page" class="breadcrumb-item pl-0 active text-uppercase pl-4">surabaya</li>
+          <li class="breadcrumb-item"><a href="<?php echo site_url(); ?>" class="text-uppercase pl-3">Home</a></li>
+          <li aria-current="page" class="breadcrumb-item pl-0 active text-uppercase pl-4">Advertise</li>
       </ol>
     </nav><!-- breadcrumb -->
 
@@ -28,3 +33,12 @@
     </section>      
 
 </div><!-- end col read -->
+
+    <!-- right sidebar inner --> 
+    <?php $this->load->view($this->config->item('template_name') . 'sidebar-right-inner'); ?>
+
+  </div>
+
+</div><!-- /.container 1 -->
+
+<?php $this->load->view($this->config->item('template_name') . 'main-bottom'); ?> 

@@ -28,7 +28,7 @@ class Content_model extends CI_Model
 								OR `PC`.`category_id` = 3
 								OR `PC`.`category_id` = 4)";
 		
-		} else if($category_id == 5) { // Persija
+		} else if($category_id == 5) { // Persebaya
 				$sql_where = " AND (`PC`.`category_id`= 5) ";
 
 		} else if($category_id == 5) { // Komunitas

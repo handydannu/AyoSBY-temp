@@ -1,35 +1,39 @@
 <!-- list wisata -->
         <h4 class="pt-2 mml-2">
-          <a class="roll-link" href="#"><span data-title="LAINNYA >>"><i class="fas fa-tram"></i> WISATA SURABAYA</span></a>
+          <a class="roll-link" href="<?php echo site_url(); ?>wisata"><span data-title="LAINNYA >>"><i class="fas fa-tram"></i> WISATA SURABAYA</span></a>
         </h4>
         <div class="rounded-0 mt-3">
-          <div class=" shade">
-            <a href="#">
-              <img class="img-fluid" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/25/3176/jasad-muhammad-affan-hariyanto-ditemukan-di-tanah-kosong.jpg" alt="Card image cap">
+          <div class="shade">
+            <?php
+              $dc = content_time($wisata[0]['post_date_created']);
+              $dp = id_time($wisata[0]['post_date']);
+
+              $url = site_url('read') . '/' . $dc['year'] . '/' . $dc['month'] . '/' . $dc['day'] . '/' . $wisata[0]['post_id'] . '/' . /*$semarang_raya[0]['category_id'] . '/' .*/ $wisata[0]['slug'];
+              $url_img = $this->config->item('images_articles_uri') . $dc['year'] . '/' . $dc['month'] . '/' . $dc['day'] . '/' . $wisata[0]['post_id'] . '/';
+            ?>
+            <a href="<?php echo $url; ?>">
+              <img class="img-fluid" src="<?php echo $url_img . $wisata[0]['post_image_content']; ?>" onerror="this.src='<?php echo base_url();?>assets/img/nophoto.png';">
             </a>
           </div>
           <div>
-            <span class="mt-0 sub-head-date"><i class="fas fa-clock"></i> 12 September</span>        
+            <span class="mt-0 sub-head-date"><i class="fas fa-clock"></i> <?php echo $dp; ?></span>        
               <p>
-                <a class="sub-head-20" href="#">lorem ipsum sit amet dolor lorem ipsum sit</a>
+                <a class="sub-head-20" href="<?php echo $url; ?>"><?php echo $wisata[0]['post_title']; ?></a>
               </p>
           </div>
 
-          <ul class="list-group list-group-flush left-orange-title mt-3">
+          <ul class="list-group list-group-flush left-orange-title mt-3">            
+          <?php for($i = 1; $i < count($wisata); $i++) { ?>
+            <?php
+              $dc = content_time($wisata[$i]['post_date_created']);
+              $dp = id_time($wisata[$i]['post_date']);
+
+              $url = site_url('read') . '/' . $dc['year'] . '/' . $dc['month'] . '/' . $dc['day'] . '/' . $wisata[$i]['post_id'] . '/' . /*$semarang_raya[$i]['category_id'] . '/' .*/ $wisata[$i]['slug'];
+              $url_img = $this->config->item('images_articles_uri') . $dc['year'] . '/' . $dc['month'] . '/' . $dc['day'] . '/' . $wisata[$i]['post_id'] . '/';
+            ?>
             <li class="pop-list">
-              <a class="sub-head-16" href="#">Cras justo odio Dapibus ac facilisis in</a>
+              <a class="sub-head-16" href="<?php echo $url; ?>"><?php echo $wisata[$i]['post_title']; ?></a>
             </li>
-            <li class="pop-list">
-             <a class="sub-head-16" href="#">ini dia manusia paling kuat didunia setelah hulk hogan di eropa</a>
-            </li>
-            <li class="pop-list">
-             <a class="sub-head-16" href="#">Cara memperbaiki mobil tanpa ke bengkel</a>
-            </li>
-            <li class="pop-list">
-             <a class="sub-head-16" href="#">Cras justo odio Dapibus ac facilisis in</a>
-            </li>
-            <li class="pop-list">
-             <a class="sub-head-16" href="#">berapa harga ROG phone di Indonesia ?</a>
-            </li>
+            <?php } ?>
           </ul>
         </div>

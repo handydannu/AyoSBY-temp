@@ -11,16 +11,16 @@
 
       <div class="col-lg-3 pt-3 mt-3 text-center"><!-- medsos area -->
         <div class="medsos mt-2">
-          <a href="#" class="medsos-icon fb-bg"><i class="fab fa-facebook-f fa-2x"></i></a>
-          <a href="#" class="medsos-icon twt-bg"><i class="fab fa-twitter fa-2x"></i></a>
-          <a href="#" class="medsos-icon ig-bg"><i class="fab fa-instagram fa-2x"></i></a>
-          <a href="#" class="medsos-icon yt-bg"><i class="fab fa-youtube fa-2x"></i></a>
-          <a href="#" class="medsos-icon rss-bg"><i class="fas fa-rss fa-2x"></i></a>
+          <a href="<?php echo $this->config->item('social_url')['facebook']; ?>" target="_blank" title="Follow @<?php echo $this->config->item('social_acc')['facebook']; ?> on Facebook" class="medsos-icon fb-bg"><i class="fab fa-facebook-f fa-2x"></i></a>
+          <a href="<?php echo $this->config->item('social_url')['twitter']; ?>" target="_blank" title="Follow @<?php echo $this->config->item('social_acc')['twitter']; ?> on Twitter" class="medsos-icon twt-bg"><i class="fab fa-twitter fa-2x"></i></a>
+          <a href="https://www.instagram.com/ayosurabaya_official" title="Follow @<?php echo $this->config->item('social_acc')['instagram']; ?> on Instagram" class="medsos-icon ig-bg"><i class="fab fa-instagram fa-2x"></i></a>
+          <a href="<?php echo $this->config->item('social_url')['youtube']; ?>" target="_blank" title="Subscribe YouTube AyoChannel" class="medsos-icon yt-bg"><i class="fab fa-youtube fa-2x"></i></a>
+          <a href="<?php echo site_url(); ?>rss" target="_blank" title="RSS Feed AyoSurabaya.com" class="medsos-icon rss-bg"><i class="fas fa-rss fa-2x"></i></a>
         </div>  
       </div><!-- end medsos area -->
 
       <div class="col-lg-6 pt-3 mt-3 text-center"><!-- logo area -->
-        <a href="#"><img class="img-fluid" src="https://www.ayosurabaya.com/assets/img/ayosurabaya-logo.png?w=400"></a>
+        <a href="<?php echo site_url(); ?>"><img class="img-fluid" src="https://www.ayosurabaya.com/assets/img/ayosurabaya-logo.png?w=400"></a>
         <div class="logo-text">SEMUA TENTANG SURABAYA</div>
       </div><!-- end logo area -->
       

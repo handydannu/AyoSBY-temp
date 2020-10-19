@@ -50,10 +50,10 @@ class Home extends CI_Controller
 		// Content 
 		$c['headline']				= $this->article_model->get_headline_by_category(0, 5); // 0 => ALL
 		// $c['recent']				= $this->article_model->get_recent_by_category(0, 12); // article only
-		$c['recent']				= $this->content_model->get_recent_by_category(0, 10); // all post type
-		$c['popular']				= $this->article_model->get_popular_by_category(0, 5);
+		$c['recent']				= $this->content_model->get_recent_by_category(0, 16); // all post type
+		$c['popular']				= $this->article_model->get_popular_by_category(0, 10);
 		if (empty($c['popular'])) {
-			$c['popular'] = $this->article_model->get_popular_monthly_by_category(0, 5);
+			$c['popular'] = $this->article_model->get_popular_monthly_by_category(0, 10);
 		}
 		$c['tag_populer']			= $this->article_model->tag_populer(0, 5);
 		$tmp['photo'] 				= $this->photo_model->get_recent(12, 0); // limit, offset
@@ -66,12 +66,12 @@ class Home extends CI_Controller
 		//$c['daerah']				= $this->article_model->get_recent_by_category(2, 5);
 		$c['surabaya_raya']			= $this->article_model->get_recent_by_category(1, 5);
 		$c['umkm']					= $this->article_model->get_recent_by_category(127, 6);
-		// $c['nasional']			= $this->article_model->get_recent_by_category(3, 5);
-		// $c['internasional']		= $this->article_model->get_recent_by_category(4, 5);
-		$c['netizen']			 	= $this->article_model->get_recent_by_category(10, 5);
+		$c['nasional']				= $this->article_model->get_recent_by_category(3, 5);
+		$c['internasional']			= $this->article_model->get_recent_by_category(4, 5);
+		$c['netizen']			 	= $this->article_model->get_recent_by_category(10, 8);
 		$c['umum']					= $this->article_model->get_recent_by_category(19, 5);
-		$c['bodetabek']			 	= $this->article_model->get_recent_by_category(2, 5);
-		$c['persebaya']			 	= $this->article_model->get_recent_by_category(5, 5);
+		//$c['bodetabek']			 	= $this->article_model->get_recent_by_category(2, 5);
+		$c['persebaya']			 	= $this->article_model->get_recent_by_category(5, 6);
 		$c['wisata']			 	= $this->article_model->get_recent_by_category(7, 5);
 		$c['bisnis']			 	= $this->article_model->get_recent_by_category(8, 5);
 		$c['explore']				= $this->article_model->get_recent_by_category(6, 5);
