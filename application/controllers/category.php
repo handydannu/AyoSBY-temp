@@ -178,7 +178,9 @@ class Category extends CI_Controller {
 		$config['first_link'] = '&laquo; Awal';
 		$config['last_link'] = 'Akhir &raquo;';
 		$config['next_link'] = 'Selanjutnya &rsaquo;';
-		$config['prev_link'] = '&lsaquo; Sebelumnya';
+		$config['prev_link'] = ' 
+                  <span aria-hidden="true"><i class="fas fa-angle-double-left"></i></span>
+              ';
 		
 		$this->pagination->initialize($config);
 

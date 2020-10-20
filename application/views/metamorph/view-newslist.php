@@ -48,8 +48,12 @@
 
       </div><!-- list berita -->
 
+        <?php if ($page['links'] != '') { ?>
       <nav class="pagination-outer mt-3" aria-label="Page navigation">
-      <ul class="pagination">
+      <ul class="pagination">     
+      <?php echo $page['links']; ?>   
+         
+
           <li class="page-item">
               <a href="#" class="page-link" aria-label="SEBELUMNYA">
                   <span aria-hidden="true"><i class="fas fa-angle-double-left"></i></span>
@@ -65,6 +69,8 @@
           </li>
       </ul>
       </nav>
+   <?php } ?>
+             
 
     </div>
 
