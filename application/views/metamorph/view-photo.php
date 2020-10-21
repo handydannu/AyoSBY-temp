@@ -1,22 +1,21 @@
-<div class="col-lg-8 col-sm-12 mt-3"><!-- main col read -->
+<?php $this->load->view($this->config->item('template_name') . 'main-top'); ?> 
+  <div class="container"><!-- Page main container-->   
+    <div class="row"><!-- main Column --> 
+      <div class="col-lg-8 col-sm-12 mt-3"><!-- main col read -->
 
         <!-- breadcrumb -->
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb breadcrumb-arrow p-0">
-            <li class="breadcrumb-item"><a href="#" class="text-uppercase pl-3">Home</a></li>
-            <li class="breadcrumb-item pl-0"><a href="#" class="text-uppercase">Library</a></li>
-            <li aria-current="page" class="breadcrumb-item pl-0 active text-uppercase pl-4">surabaya</li>
-          </ol>
-        </nav><!-- breadcrumb -->
+        <nav aria-label="breadcrumb" style="background-color: #e2e0e0; padding: 10px 15px; margin-left: -15px;">
+          <a class="sub-head-20 ayo-orange text-uppercase" href="<?php echo site_url(); ?>">Home</a>
+         / <a class="text-uppercase" href="<?php echo site_url('foto'); ?>">FOTO</a>          
+      </nav><!-- breadcrumb -->
 
         
           <h1 class="mt-2">
-            Persebaya Resmi Menjadi Bagian Dari Klub Sepakbola U-19 Indonesia Official
+            <?php echo $photo['slide'][0]['post_title']; ?>
           </h4>
 
           <!-- AddToAny END -->
-          <span class="date-posted">12 September</span> | <span class="sub-head-author">Redaktur Surabaya</span>
-
+          <span class="date-posted"><?php echo id_time($photo['slide'][0]['post_date_created']); ?></span>
 
           <!-- AddToAny BEGIN -->
           <div class="a2a_kit a2a_kit_size_32 a2a_default_style mb-1 mt-1">
@@ -37,77 +36,64 @@
 
           <div class="mt-2 mb-1">  
             <i class="fas fa-pen fa-xs"></i> PENULIS
-            <span class="img-photographer">Juan Pablo</span>
+            <span class="img-photographer"><?php echo $photo['slide'][0]['nama'];?></span>
               &nbsp;&nbsp;<i class="fas fa-user-clock"></i> EDITOR
-            <span class="img-photographer">Don Montoya</span>
+            <span class="img-photographer">
+              <?php if($photo['slide'][0]['post_source'] != '') { ?>
+                    Source: <?php echo $photo['slide'][0]['post_source']; ?>
+                    <?php } ?>
+                    <?php if($photo['slide'][0]['nama'] != '') { ?>
+                    Editor: <?php echo $photo['slide'][0]['nama']; ?>
+              <?php } ?>
+            </span>
           </div>
           
           <!-- photo carousel -->
-          <div id="carousel-photo" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators list-car">
-              <li data-target="#carousel-photo" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel-photo" data-slide-to="1"></li>
-              <li data-target="#carousel-photo" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img class="d-block w-100" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/10/06/3424/lumpur_bor_sumenep.jpg" alt="First slide">
+              <?php
+                    $dc = content_time($photo['slide'][0]['post_date_created']); // for efficiency purposes not getting looped
+                    foreach ($photo['slide'] as $ps) {
+                          $url_img = $this->config->item('images_photos_uri') . $dc['year'] . '/' . $dc['month'] . '/' . $dc['day'] . '/' . $ps['photo_id'] . '/';
+              ?>
+              <div class="mt-2">
+                <img class="d-block w-100" src="<?php echo $url_img . $ps['image']; ?>">
+                <p><?php echo $ps['description']; ?></p>
               </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/10/06/3423/rismah.jpg" alt="Second slide">
-              </div>
-              <div class="carousel-item">
-                <img class="d-block w-100" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/10/05/3421/download.jpeg" alt="Third slide">
-              </div>
-            </div>
-            <a class="carousel-control-prev" href="#carousel-photo" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carousel-photo" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div><!-- photo carousel -->
-          
-          <span class="img-caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat tincidunt nisi vel molestie. Aliquam quis ornare purus. Praesent id nulla vel ex finibus laoreet</span>
-            &nbsp;|&nbsp;<i class="fas fa-camera-retro fa-xs"></i>
-          <span class="img-photographer">Istimewa</span>
+
+              <?php } ?>
 
           <section>
-          <p><strong>Surabaya</strong>- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed placerat tincidunt nisi vel molestie. Aliquam quis ornare purus. Praesent id nulla vel ex finibus laoreet. Maecenas iaculis commodo leo sit amet elementum. Nullam rutrum justo in mi porta maximus. Maecenas vulputate, diam ac dapibus pellentesque, massa orci aliquet felis, quis auctor purus massa ut risus. Vestibulum vulputate hendrerit augue, ac lobortis dui. Phasellus eget pulvinar orci. Vestibulum a ipsum quis mauris vehicula elementum a in dolor.</p>
-          <p class="ayo-baca">
-            baca juga : <a href="#">kemana kan perginya angin ?</a>
-          </p>
 
-          <p>
-             Phasellus eu purus eu nibh bibendum auctor. Suspendisse accumsan finibus magna non semper. Suspendisse nec enim elit. Proin id tincidunt orci, et suscipit enim. Praesent non orci cursus tellus ultricies ullamcorper nec et urna. Fusce sed consectetur felis. Maecenas consequat eros eu aliquet rhoncus. Sed dapibus cursus ullamcorper. Cras a rhoncus nulla. Duis at egestas velit. Mauris fringilla sem non feugiat condimentum. <a href="#">Vestibulum</a> dignissim ex quis augue egestas blandit. Proin venenatis erat nec tempus tempor. Donec tellus leo, fermentum eu auctor nec, sodales id lectus. Phasellus magna magna, luctus ut metus ut, maximus posuere odio. Praesent scelerisque ante erat, efficitur interdum odio congue sed.</p>
-
-          <p>Sed ut est eget est accumsan eleifend. Suspendisse viverra pharetra justo non dignissim. Suspendisse velit dui, fermentum non dui eu, suscipit aliquam justo. Donec non justo sit amet eros suscipit mattis. Quisque rhoncus vitae leo nec ullamcorper. Vestibulum nisi lorem, pulvinar ut sem ac, ultricies condimentum purus. Mauris dapibus augue id ultricies scelerisque. Proin at vulputate orci. Vestibulum eget mauris non libero cursus varius ut commodo turpis. 
-          </p>          
           </section>
 
         <!-- article ads -->
         <div class="col-12">
           <img class="shade img-fluid ads-rectangle" src="https://www.ayosurabaya.com/assets/img/widget/ayo-netizen.jpg">
         </div><!-- article ads -->
-
-        <span><i class="fas fa-hashtag"></i> TAG TERKAIT</span>
-        <div class="txt-tag">
-          <span><a href="#">SURABAYA</a></span>
-          <span><a href="#">PERSEBAYA</a></span>
-          <span><a href="#">viral</a></span>
-          <span><a href="#">kudus</a></span>
-        </div>
-
-        <div id="fb-root"></div>
-        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v8.0&appId=664427773749378&autoLogAppEvents=1" nonce="HXZkYtnd"></script>
-        <div class="fb-comments" data-href="http://ayosurabaya.com/" data-numposts="5" data-width=""></div>
-
+        
         <!-- berita terkait -->
-        <h4 class="pt-2 mml-1">
+        <h4 class="mt-3 mml-1">
           <span data-title="LAINNYA >>"><i class="far fa-newspaper"></i> PHOTO LAINNYA</span>
         </h4>
-        <?php include 'components/terkait.php';?>
+        <?php $this->load->view($this->config->item('template_name') . 'relate-photo'); ?>
 
-</div><!-- end col read -->
+        <div id="fb-root"><!-- fb comment -->
+          <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=176650753609026&version=v2.0";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+          </script>
+          <div class="fb-comments" data-href="<?php echo current_url(); ?>" data-colorscheme="light" data-numposts="10" data-width="100%"></div>
+        </div><!--/ fb comment -->
+
+    </div><!-- end col read -->
+
+  <?php $this->load->view($this->config->item('template_name') . 'sidebar-right'); ?>
+
+  </div>
+
+</div><!-- /.container 1 -->
+
+<?php $this->load->view($this->config->item('template_name') . 'main-bottom'); ?> 

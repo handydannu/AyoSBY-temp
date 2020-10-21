@@ -7,18 +7,14 @@
       <div class="col-lg-8 col-sm-12 mt-3"><!-- main col read -->
 
       <!-- breadcrumb -->
-      <nav aria-label="breadcrumb">
-        <ol class="breadcrumb breadcrumb-arrow p-0">
+      <nav aria-label="breadcrumb" style="background-color: #e2e0e0; padding: 10px 15px; margin-left: -15px;">
           <?php if(isset($article['post']['category_id'])) { // category_id should exist first ?>
-          <li class="breadcrumb-item"><a class="text-uppercase pl-3" href="<?php echo site_url(); ?>">Home</a></li>
+          <a class="sub-head-20 ayo-orange text-uppercase" href="<?php echo site_url(); ?>">Home</a>
           <?php } ?>
           <?php if($article['category_parent_id'] !== false) { ?>
-          <li class="breadcrumb-item pl-0"><a class="text-uppercase" href="<?php echo site_url($article['category_parent_id']['category_link']); ?>"><?php echo $article['category_parent_id']['category_name']; ?></a></li>    
-          <li class="breadcrumb-item pl-0"><a href="<?php echo site_url($article['post']['category_link']); ?>" class="text-uppercase"><?php echo $article['post']['category_name']; ?>
-            <?php } else { ?></a></li>
-          <li aria-current="page" class="breadcrumb-item pl-0 active text-uppercase pl-4"><?php echo $article['post']['category_name']; ?></li>
-          <?php } ?>
-        </ol>
+          / <a class="sub-head-20 ayo-orange text-uppercase" href="<?php echo site_url($article['category_parent_id']['category_link']); ?>"><?php echo $article['category_parent_id']['category_name']; ?></a>  
+          / <a href="<?php echo site_url($article['post']['category_link']); ?>" class="text-uppercase"><?php echo $article['post']['category_name']; ?>
+            <?php } else { }?></a>
       </nav><!-- breadcrumb -->
         
       <h1 class="mt-2">
@@ -46,7 +42,7 @@
 
       <div class="mt-2 mb-1">  
         <i class="fas fa-pen fa-xs"></i> PENULIS
-        <span class="img-photographer"><?php echo id_time($article['post']['post_date_created']); ?></span>
+        <span class="img-photographer"><?php echo $article['post']['post_author_name'] ?></span>
           &nbsp;&nbsp;<i class="fas fa-user-clock"></i> EDITOR
           <?php if($article['post']['post_source'] != '') { ?>      
           <span class="img-photographer">Source: <?php echo $article['post']['post_source']; ?></p>
@@ -81,15 +77,21 @@
 
       <span><i class="fas fa-hashtag"></i> TAG TERKAIT</span>
       <div class="txt-tag">
+        <ul>
         <?php
           if(!empty($article['tags'])) {
             foreach($article['tags'] as $at) {
-        ?>
-        <span><a href="<?php echo site_url('tag/' . $at['slug']); ?>"><?php echo $at['tag']; ?></a></span> 
-        <?php
+           ?>
+        <li style="list-style: none;display: inline-block;margin:6px 2px">
+          <span>
+            <a href="<?php echo site_url('tag/' . $at['slug']); ?>"><?php echo $at['tag']; ?></a>
+          </span>
+        </li>
+          <?php
+              }
             }
-          }
-        ?>
+          ?>
+        </ul>
       </div>
 
           <script>
@@ -112,6 +114,12 @@
               }document.oncopy = addLink;
           </script>
 
+      <!-- berita terkait -->
+      <h4 class="pt-2 mml-1">
+        <span data-title="LAINNYA >>"><i class="far fa-newspaper"></i> BERITA TERKAIT</span>
+      </h4>
+      <?php $this->load->view($this->config->item('template_name') . 'relate-news'); ?>
+      
           <div id="fb-root">
             <script>(function(d, s, id) {
               var js, fjs = d.getElementsByTagName(s)[0];
@@ -123,12 +131,6 @@
             </script>
             <div class="fb-comments" data-href="<?php echo current_url(); ?>" data-colorscheme="light" data-numposts="10" data-width="100%"></div>
           </div>
-
-      <!-- berita terkait -->
-      <h4 class="pt-2 mml-1">
-        <span data-title="LAINNYA >>"><i class="far fa-newspaper"></i> BERITA TERKAIT</span>
-      </h4>
-      <?php $this->load->view($this->config->item('template_name') . 'relate-news'); ?>
 
       </div><!-- end col read -->
 

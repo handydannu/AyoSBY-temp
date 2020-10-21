@@ -26,14 +26,14 @@
 <?php meta_ogp(); ?>
 <?php echo (isset($meta['canonical']) || $meta['canonical'] != '') ? $meta['canonical'] : ''; ?>
 
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="shortcut icon" href="/assets/img/footer-logo.png">
+<link rel="apple-touch-icon" href="http://localhost/ayosurabaya/apple-touch-icon.png">
+<link rel="shortcut icon" href="http://localhost/ayosurabaya/assets/img/footer-logo.png">
 
 <!-- css -->
 <link rel="stylesheet" href="http://localhost/ayosurabaya/assets/css/bootstrap.min.css">
 <link rel="stylesheet" href="http://localhost/ayosurabaya/assets/css/surabaya.css">
 <link rel="stylesheet" href="http://localhost/ayosurabaya/assets/fontawesome/css/all.css">
-<link rel="icon" href="https://www.ayosurabaya.com/assets/img/footer-logo.png" type="image/x-icon"/ >
+<link rel="icon" href="http://localhost/ayosurabaya/assets/img/footer-logo.png" type="image/x-icon"/ >
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">   
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous" />
 

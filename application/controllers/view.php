@@ -106,14 +106,15 @@ class View extends CI_Controller {
 		// _d($c['photo']); exit;
 
 		// Temporarily related photos using recent photos. Exclude this post_id
-		$c['photo']['related']				= $this->photo_model->get_recent(10, 0, $get_uri['post_id']); 
+		$c['photo']['related']				= $this->photo_model->get_recent(8, 0, $get_uri['post_id']); 
 		// _d($c['photo']);
 		// _d($c['photo']['related']['data']); exit;
 		// _d($c['photo']['related']['total_row']['count_photo']); exit;
 
 		// Sidebar Content
 		$c['piala_dunia']					= $this->article_model->get_recent_by_category(82, 5);
-
+		
+		$c['wisata']				= $this->article_model->get_recent_by_category(27, 6);
 		// Set Visitor Hit
 		date_default_timezone_set('Asia/Jakarta');
         $data_hit = array(
@@ -124,7 +125,7 @@ class View extends CI_Controller {
         );
         $this->common_model->set_hit($data_hit); // temporarily not checked if it is working or not? return value has been prepared
 
-		$this->load->view($this->config->item('template_name') . 'single-photo', $c);
+		$this->load->view($this->config->item('template_name') . 'view-photo', $c);
 	}
 
 }

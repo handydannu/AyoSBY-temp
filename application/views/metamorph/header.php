@@ -26,7 +26,7 @@
       
       <div class="col-lg-3 pt-3 mt-3 text-center"><!-- date area -->
           <div class="bg-date-nav">
-            <i class="fas fa-calendar"></i> <span id="tanggalwaktu"></span>
+            <i class="fas fa-calendar"></i>&nbsp;<span id="tanggalwaktu"></span>
           </div>
       </div><!-- end area -->
 

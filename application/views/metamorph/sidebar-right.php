@@ -1,5 +1,5 @@
 <!-- Sidebar kanan -->
-<div class="col-lg-4 col-sm-12 mt-3">       
+<div class="col-lg-4 col-sm-12 mt-3 mb-3">       
   <!-- ads banner 300 -->  
   <?php $this->load->view($this->config->item('template_name') . 'banner-300'); ?> 
   <!-- 10 populer -->  

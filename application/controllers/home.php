@@ -8,7 +8,6 @@ class Home extends CI_Controller
 		parent::__construct();
 		$this->load->library('Mobile_Detect');
 		$this->load->helper('cookie'); // for mobile detect and site view switcher purpose
-
 		// TO DO: Load Model 
 		$this->load->model('article_model');
 		$this->load->model('photo_model');

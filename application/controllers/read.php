@@ -105,9 +105,9 @@ class Read extends CI_Controller {
 
 		// Content
 		$c['recent']						= $this->article_model->get_recent_by_category(0, 10); // 0 => ALL
-		$c['popular'] 						= $this->article_model->get_popular_by_category(0, 5); // 0 => ALL + Advertorial
+		$c['popular'] 						= $this->article_model->get_popular_by_category(0, 10); // 0 => ALL + Advertorial
 		if(empty($c['popular'])) {
-			$c['popular'] 					= $this->article_model->get_popular_monthly_by_category(0, 5); // 0 => ALL + Advertorial
+			$c['popular'] 					= $this->article_model->get_popular_monthly_by_category(0, 10); // 0 => ALL + Advertorial
 		}
 
 		$c['article']						= $this->article_model->get_by_id($get_uri['post_id']);
@@ -125,7 +125,7 @@ class Read extends CI_Controller {
 		$c['article']['related'] 			= $this->article_model->get_related_by_keyword( // you can set keyword param, such as tags, categories, keywords, combination of title and summary, and others as well
 												$c['article']['post']['post_title'], 
 												// $c['article']['post']['post_summary'],
-												$limit = 10,
+												$limit = 8,
 												$exception = $c['article']['post']['post_id'] // avoid current post not getting retrieved
 												// $c['article']['tags']
 											); 

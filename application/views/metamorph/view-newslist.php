@@ -11,9 +11,9 @@
         <a class="sub-head-20 ayo-orange text-uppercase" href="<?php echo site_url(); ?>">Home</a>
           <?php if($cmeta['parent_id'] > 0) { ?>
           / <a class="sub-head-18 text-uppercase" href="<?php echo site_url($cmeta['data_parent']['category_link']); ?>"><?php echo $cmeta['data_parent']['category_name']; ?></a>
-          / <a class="sub-head-18 text-uppercase" href="<?php echo site_url($cmeta['category_link']); ?>" class="active"><?php echo $cmeta['category_name']; ?></a>
+          / <a class="sub-head-18 text-uppercase active" href="<?php echo site_url($cmeta['category_link']); ?>" ><?php echo $cmeta['category_name']; ?></a>
           <?php } else { ?>
-          / <a class="sub-head-18 text-uppercase" href="<?php echo site_url($cmeta['category_link']); ?>" class="active"><?php echo $cmeta['category_name']; ?></a>
+          / <a class="sub-head-18 text-uppercase active" href="<?php echo site_url($cmeta['category_link']); ?>"><?php echo $cmeta['category_name']; ?></a>
           <?php } ?>
       </nav><!-- breadcrumb -->
 
@@ -48,28 +48,9 @@
 
       </div><!-- list berita -->
 
-        <?php if ($page['links'] != '') { ?>
-      <nav class="pagination-outer mt-3" aria-label="Page navigation">
-      <ul class="pagination">     
-      <?php echo $page['links']; ?>   
-         
-
-          <li class="page-item">
-              <a href="#" class="page-link" aria-label="SEBELUMNYA">
-                  <span aria-hidden="true"><i class="fas fa-angle-double-left"></i></span>
-              </a>
-          </li>
-          <li class="page-item active"><a class="page-link" href="#">1</a></li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item">
-              <a href="#" class="page-link" aria-label="SELANJUTNYA">
-                  <span aria-hidden="true"><i class="fas fa-angle-double-right"></i></span>
-              </a>
-          </li>
-      </ul>
-      </nav>
-   <?php } ?>
+        <?php if ($page['links'] != '') { ?>          
+        <?php echo $page['links']; ?>
+        <?php } ?>
              
 
     </div>
