@@ -1,99 +1,60 @@
-<div class="col-lg-8 col-sm-12 mt-3"><!-- main col read -->
-  <!-- breadcrumb -->
-  <nav aria-label="breadcrumb">
-    <ol class="breadcrumb breadcrumb-arrow p-0">
-      <li class="breadcrumb-item"><a href="#" class="text-uppercase pl-3">Home</a></li>
-      <li aria-current="page" class="breadcrumb-item pl-0 active text-uppercase pl-4">galeri</li>
-    </ol>
-  </nav><!-- breadcrumb -->
+<?php $this->load->view($this->config->item('template_name') . 'main-top'); ?>
 
-  <section>
-    <div class="embed-responsive embed-responsive-16by9">
-      <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/PgVSbU4Eqk0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </div>
-    <span class="date-posted">12 September</span> | <span class="sub-head-author">Redaktur Surabaya</span>
-    <h3>
-      <a href="#">Persebaya Resmi Menjadi Bagian Dari Klub Sepakbola U-19 Indonesia Official</a>
-    </h3>
+  <div class="container"><!-- Page 1 -->     
+
+    <div class="row"><!-- main Column -->    
+
+    <div class="col-lg-8 col-sm-12 mt-3"><!-- main col read -->
+     <!-- breadcrumb -->
+    <nav aria-label="breadcrumb" style="background-color: #e2e0e0; padding: 10px 15px; margin-left: -15px;">
+      <a class="sub-head-20 ayo-orange text-uppercase" href="<?php echo site_url(); ?>">Home</a>
+     / <a class="sub-head-18 text-uppercase active" href="<?php echo site_url('video'); ?>">VIDEO</a>          
+   </nav><!-- breadcrumb -->
+
+       <section class="mt-3">
     <div class="row">
-      <div class="col-lg-6 col-md-6 col-sm-6">
-        <a href="#"><img class="img-fluid shade" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/10/05/3396/74082-massa-santri-mendesak-penutupan-tempat-wisata-di-pamekasan.jpg"></a>
-        <span class="date-posted">12 September</span> | <span class="sub-head-author">Redaktur Surabaya</span>
-        <h5>
-          <a href="#">Persebaya Resmi Menjadi Bagian Dari Klub Sepakbola U-19 Indonesia Official</a>
-        </h5>
-      </div>
-      <div class="col-lg-6 col-md-6 col-sm-6">
-        <a href="#"><img class="img-fluid shade" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/28/3226/daun_ga,bir.jpg"></a>
-        <span class="date-posted">12 September</span> | <span class="sub-head-author">Redaktur Surabaya</span>
-        <h5>
-          <a href="#">Persebaya Resmi Menjadi Bagian Dari Klub Sepakbola U-19 Indonesia Official</a>
-        </h5>
-      </div>
+       <?php for($i = 0; $i < count($video); $i++) { ?>
+                    <?php
+                      $dc = content_time($video[$i]['date']);
+                      $dp = id_time($video[$i]['date']);
 
-       <div class="col-lg-6 col-md-6 col-sm-6">
-        <a href="#"><img class="img-fluid shade" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/28/3226/daun_ga,bir.jpg"></a>
-        <span class="date-posted">12 September</span> | <span class="sub-head-author">Redaktur Surabaya</span>
+                      $url = site_url('watch') . '/' . $dc['year'] . '/' . $dc['month'] . '/' . $dc['day'] . '/' . $video[$i]['video_id'] . '/' . $video[$i]['name'];
+                      $url_img = 'http://i.ytimg.com/vi/' . $video[$i]['video'] . '/hqdefault.jpg';
+                    ?>
+      
+        <div class="col-lg-6 col-md-6 col-sm-6">
+        <a href="<?php echo $url; ?>">
+        <img class="img-fluid post-img shade" src="<?php echo $url_img; ?>">
+        <span class="date-posted" style="color: #000;"> <?php echo $dp; ?></span>
         <h5>
-          <a href="#">Persebaya Resmi Menjadi Bagian Dari Klub Sepakbola U-19 Indonesia Official</a>
+          <?php echo $video[$i]['title']; ?>
         </h5>
-      </div>
-      <div class="col-lg-6 col-md-6 col-sm-6">
-        <a href="#"><img class="img-fluid shade" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/28/3226/daun_ga,bir.jpg"></a>
-        <span class="date-posted">12 September</span> | <span class="sub-head-author">Redaktur Surabaya</span>
-        <h5>
-          <a href="#">Persebaya Resmi Menjadi Bagian Dari Klub Sepakbola U-19 Indonesia Official</a>
-        </h5>
-      </div>
+      </a>
+       </div>
+      <?php } ?>
 
-       <div class="col-lg-6 col-md-6 col-sm-6">
-        <a href="#"><img class="img-fluid shade" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/28/3226/daun_ga,bir.jpg"></a>
-        <span class="date-posted">12 September</span> | <span class="sub-head-author">Redaktur Surabaya</span>
-        <h5>
-          <a href="#">Persebaya Resmi Menjadi Bagian Dari Klub Sepakbola U-19 Indonesia Official</a>
-        </h5>
-      </div>
-      <div class="col-lg-6 col-md-6 col-sm-6">
-        <a href="#"><img class="img-fluid shade" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/28/3226/daun_ga,bir.jpg"></a>
-        <span class="date-posted">12 September</span> | <span class="sub-head-author">Redaktur Surabaya</span>
-        <h5>
-          <a href="#">Persebaya Resmi Menjadi Bagian Dari Klub Sepakbola U-19 Indonesia Official</a>
-        </h5>
-      </div>
 
-       <div class="col-lg-6 col-md-6 col-sm-6">
-        <a href="#"><img class="img-fluid shade" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/28/3226/daun_ga,bir.jpg"></a>
-        <span class="date-posted">12 September</span> | <span class="sub-head-author">Redaktur Surabaya</span>
-        <h5>
-          <a href="#">Persebaya Resmi Menjadi Bagian Dari Klub Sepakbola U-19 Indonesia Official</a>
-        </h5>
-      </div>
-      <div class="col-lg-6 col-md-6 col-sm-6">
-        <a href="#"><img class="img-fluid shade" src="https://www.ayosurabaya.com/images-surabaya/post/articles/2020/09/28/3226/daun_ga,bir.jpg"></a>
-        <span class="date-posted">12 September</span> | <span class="sub-head-author">Redaktur Surabaya</span>
-        <h5>
-          <a href="#">Persebaya Resmi Menjadi Bagian Dari Klub Sepakbola U-19 Indonesia Official</a>
-        </h5>
-      </div>
     </div>
   </section>
 
-  <nav class="pagination-outer mt-3" aria-label="Page navigation">
-  <ul class="pagination">
-      <li class="page-item">
-          <a href="#" class="page-link" aria-label="SEBELUMNYA">
-              <span aria-hidden="true"><i class="fas fa-angle-double-left"></i></span>
-          </a>
-      </li>
-      <li class="page-item active"><a class="page-link" href="#">1</a></li>
-      <li class="page-item"><a class="page-link" href="#">2</a></li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item">
-          <a href="#" class="page-link" aria-label="SELANJUTNYA">
-              <span aria-hidden="true"><i class="fas fa-angle-double-right"></i></span>
-          </a>
-      </li>
-  </ul>
-  </nav>
 
-</div><!-- end col read -->
+      <?php if ($page['links'] != '') { ?>
+          <div class="row">
+            <div class="col-md-12">
+              <ul>
+                <?php echo $page['links']; ?>
+              </ul>
+            </div>
+          </div>
+          <?php } ?>
+
+    </div><!-- end col read -->
+
+      <!-- right sidebar --> 
+    <?php $this->load->view($this->config->item('template_name') . 'sidebar-right-inner'); ?>
+
+  </div>
+
+</div><!-- /.container 1 -->
+
+<?php $this->load->view($this->config->item('template_name') . 'main-bottom'); ?> 

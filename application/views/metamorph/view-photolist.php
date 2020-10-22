@@ -7,7 +7,6 @@
    <!-- breadcrumb -->
     <nav aria-label="breadcrumb" style="background-color: #e2e0e0; padding: 10px 15px; margin-left: -15px;">
       <a class="sub-head-20 ayo-orange text-uppercase" href="<?php echo site_url(); ?>">Home</a>
-
      / <a class="sub-head-18 text-uppercase active" href="<?php echo site_url('foto'); ?>">FOTO</a>          
    </nav><!-- breadcrumb -->
 
@@ -24,12 +23,12 @@
       
         <div class="col-lg-6 col-md-6 col-sm-6">
         <a href="<?php echo $url; ?>">
-        <img class="img-fluid post-img shade" src="<?php echo $url_img . $photo[$i]['post_image_thumb']; ?>" onerror="this.src='<?php echo base_url();?>assets/img/nophoto.png';">
-        <span class="date-posted" style="color: #000;"> <?php echo $dp; ?></span>
+        <img class="img-fluid post-img shade" src="<?php echo $url_img . $photo[$i]['post_image_thumb']; ?>" onerror="this.src='<?php echo base_url();?>assets/img/nophoto.png';"></a>
+        <span class="date-posted"> <?php echo $dp; ?></span>
         <h5>
-          <?php echo $photo[$i]['post_title']; ?>
+          <a href="<?php echo $url; ?>"><?php echo $photo[$i]['post_title']; ?></a>
         </h5>
-      </a>
+      
        </div>
       <?php } ?>
 

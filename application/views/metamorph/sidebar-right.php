@@ -5,7 +5,7 @@
   <!-- 10 populer -->  
   <?php $this->load->view($this->config->item('template_name') . 'latest-populer'); ?> 
   <!-- sticky area -->
-  <div class="sidebar-sticky ">     
+  <div class="sidebar-sticky">     
     <!-- latest wisata -->           
     <?php $this->load->view($this->config->item('template_name') . 'latest-wisata'); ?> 
     <div class="mt-3"><!-- ads banner --> 

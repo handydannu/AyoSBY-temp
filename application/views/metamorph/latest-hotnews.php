@@ -1,5 +1,5 @@
 <h4 class="pt-2 mml-1">
-              <a class="roll-link" href="<?php echo base_url();?>explore"><span data-title="LAINNYA >>"><i class="fas fa-fire"></i> HOT NEWS</span></a>
+              <a class="roll-link" href="<?php echo base_url();?>hot-news"><span data-title="LAINNYA >>"><i class="fas fa-fire"></i> HOT NEWS</span></a>
             </h4>
 
           <div class="row">

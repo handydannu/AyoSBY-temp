@@ -1,6 +1,6 @@
 <!-- netizen -->
         <h4 class="pt-2">
-          <a class="roll-link" href="#"><span data-title="LAINNYA >>"><i class="fas fa-comments"></i> AYONETIZEN</span></a>
+          <a class="roll-link" href="<?php echo base_url();?>netizen"><span data-title="LAINNYA >>"><i class="fas fa-comments"></i> AYONETIZEN</span></a>
         </h4>
         <div class="rounded-0 mr-2">
           <?php
@@ -13,7 +13,7 @@
           <a href="<?php echo $url; ?>">
               <img class="img-fluid headline-img-thumb" src="<?php echo $url_img . $netizen[0]['post_image_content']; ?>" onerror="this.src='<?php echo base_url();?>assets/img/nophoto.png';">            
             <div>
-            <span class="mt-0 sub-head-date"><i class="fas fa-clock"></i> 12 September</span>        
+            <span class="mt-0 sub-head-date"><i class="fas fa-clock"></i> <?php echo $dp; ?></span>        
               <p class="sub-head-20">
                <?php echo $netizen[0]['post_title']; ?>
               </p>

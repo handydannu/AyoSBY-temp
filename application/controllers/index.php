@@ -88,14 +88,16 @@ class Index extends CI_Controller {
 		// _d($c['input_date']);
 		$c['popular'] 						= $this->article_model->get_popular_by_category(0, 9);
 		if(empty($c['popular'])) {
-			$c['popular'] 					= $this->article_model->get_popular_monthly_by_category(0, 9); // 0 => ALL + Advertorial
+			$c['popular'] 					= $this->article_model->get_popular_monthly_by_category(0, 10); // 0 => ALL + Advertorial
 		}
 
 
 		// Sidebar Content
 		$c['piala_dunia']				= $this->article_model->get_recent_by_category(82, 5);
+		$c['netizen']			 	= $this->article_model->get_recent_by_category(10, 8);
+		$c['wisata']			 	= $this->article_model->get_recent_by_category(7, 5);
 
-		$this->load->view($this->config->item('template_name') . 'archive-index', $c);
+		$this->load->view($this->config->item('template_name') . 'view-indeks', $c);
 	}
 
 	/* This is an old function that only yield article type */
@@ -168,14 +170,14 @@ class Index extends CI_Controller {
 		// _d($c['input_date']);
 		$c['popular'] 						= $this->article_model->get_popular_by_category(0, 9);
 		if(empty($c['popular'])) {
-			$c['popular'] 					= $this->article_model->get_popular_monthly_by_category(0, 9); // 0 => ALL + Advertorial
+			$c['popular'] 					= $this->article_model->get_popular_monthly_by_category(0, 10); // 0 => ALL + Advertorial
 		}
 
 
 		// Sidebar Content
 		$c['piala_dunia']				= $this->article_model->get_recent_by_category(82, 5);
 
-		$this->load->view($this->config->item('template_name') . 'archive-index', $c);
+		$this->load->view($this->config->item('template_name') . 'view-indeks', $c);
 	}
 }
 

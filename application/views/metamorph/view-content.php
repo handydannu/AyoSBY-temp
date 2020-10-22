@@ -13,7 +13,7 @@
           <?php } ?>
           <?php if($article['category_parent_id'] !== false) { ?>
           / <a class="sub-head-20 ayo-orange text-uppercase" href="<?php echo site_url($article['category_parent_id']['category_link']); ?>"><?php echo $article['category_parent_id']['category_name']; ?></a>  
-          / <a href="<?php echo site_url($article['post']['category_link']); ?>" class="text-uppercase"><?php echo $article['post']['category_name']; ?>
+          / <a href="<?php echo site_url($article['post']['category_link']); ?>" class="sub-head-18 text-uppercase"><?php echo $article['post']['category_name']; ?>
             <?php } else { }?></a>
       </nav><!-- breadcrumb -->
         

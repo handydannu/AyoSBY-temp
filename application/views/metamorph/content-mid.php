@@ -6,5 +6,5 @@
     <!-- hot news -->              
   	<?php $this->load->view($this->config->item('template_name') . 'latest-hotnews'); ?>        
     <!-- gaya hidup --> 
-  	<?php $this->load->view($this->config->item('template_name') . 'latest-gayahidup'); ?>    
+  	<?php $this->load->view($this->config->item('template_name') . 'latest-video'); ?>    
 </div>

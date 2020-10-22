@@ -109,14 +109,15 @@ class Watch extends CI_Controller {
 		// _d($c['video']); exit;
 
 		// Temporarily related videos using recent videos. Exclude this post_id. Up one level from 'data' dimension
-		$c['video']['related']				= $this->video_model->get_recent(10, 0, $get_uri['post_id'])['data']; // video_id
+		$c['video']['related']				= $this->video_model->get_recent(8, 0, $get_uri['post_id'])['data']; // video_id
 		// _d($c['video']['related']); exit;
 		// _d($c['video']['related']['data']); exit;
 		// _d($c['video']['related']['total_row']['count_photo']); exit;
 
 		// Sidebar Content
 		$c['piala_dunia']					= $this->article_model->get_recent_by_category(82, 5);
-
+		
+		$c['wisata']				= $this->article_model->get_recent_by_category(27, 6);
 		// Set Visitor Hit
 		date_default_timezone_set('Asia/Jakarta');
         $data_hit = array(
@@ -127,7 +128,7 @@ class Watch extends CI_Controller {
         );
         $this->common_model->set_hit($data_hit); // temporarily not checked if it is working or not? return value has been prepared
 
-		$this->load->view($this->config->item('template_name') . 'single-video', $c);
+		$this->load->view($this->config->item('template_name') . 'view-video', $c);
 	}
 }
 

@@ -90,7 +90,7 @@
 
     </div><!-- end col read -->
 
-  <?php $this->load->view($this->config->item('template_name') . 'sidebar-right'); ?>
+  <?php $this->load->view($this->config->item('template_name') . 'sidebar-right-inner'); ?>
 
   </div>
 

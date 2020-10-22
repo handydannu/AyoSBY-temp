@@ -25,6 +25,9 @@ class Page extends CI_Controller {
 			$c['popular'] = $this->article_model->get_popular_monthly_by_category(0, 10);
 		}
 		$c['piala_dunia']				= $this->article_model->get_recent_by_category(82, 5);
+		
+		$c['wisata']			 	= $this->article_model->get_recent_by_category(7, 5);
+		$c['netizen']			 	= $this->article_model->get_recent_by_category(10, 8);
 
 		$this->c = $c;
     }
@@ -41,7 +44,7 @@ class Page extends CI_Controller {
 
 	public function pencarian()
 	{
-		$this->load->view($this->config->item('template_name') . 'page/pencarian', $this->c);
+		$this->load->view($this->config->item('template_name') . 'page/view-cari', $this->c);
 	}
 	
 	public function about_us()
@@ -91,7 +94,7 @@ class Page extends CI_Controller {
 
 	public function error_404()
 	{
-		$this->load->view($this->config->item('template_name') . 'page/misc-404');
+		$this->load->view($this->config->item('template_name') . 'page/page-404');
 	}
 
 }

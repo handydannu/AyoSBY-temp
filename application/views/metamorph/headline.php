@@ -15,7 +15,7 @@
     <img class="img-fluid headline-img" src="<?php echo $url_img . $headline[0]['post_image_content']; ?>" onerror="this.src='<?php echo base_url();?>assets/img/nophoto.png';">
     <div class="card-img-overlay headline-grid d-flex flex-column align-items-start">
         <p class="sub-head-20 mt-2 text-white"><?php echo $headline[0]['post_title']; ?></p>                    
-        <span class="badge badge-hl font-weight-normal mr-2 rounded-0"><?php echo $dp; ?></span>
+        <span class="badge badge-hl font-weight-normal mr-2 rounded-0"><?php echo substr($headline[0]['post_date'], 11, 5).' WIB'?></span>
     </div>
    </a>
 </div><!-- /big picture -->
@@ -35,7 +35,7 @@
           <img class="img-fluid mx-auto d-block headline-img-med shade" src="<?php echo $url_img . $headline[$i]['post_image_content']; ?>">
           <div class="card-img-overlay headline-grid d-flex flex-column align-items-start">
               <p class="sub-head-16 text-white"><?php echo $headline[$i]['post_title']; ?></p>                    
-              <span class="badge badge-hl font-weight-normal mr-2 rounded-0"><?php echo $dp; ?></span>
+              <span class="badge badge-hl font-weight-normal mr-2 rounded-0"><?php echo substr($headline[$i]['post_date'], 11, 5).' WIB'?></span>
           </div>
       </a>    
       <?php } ?>
@@ -55,7 +55,7 @@
           <img class="img-fluid mx-auto d-block headline-img-med shade" src="<?php echo $url_img . $headline[$i]['post_image_content']; ?>" alt="Card image cap">
           <div class="card-img-overlay headline-grid d-flex flex-column align-items-start">
               <p class="sub-head-16 text-white"><?php echo $headline[$i]['post_title']; ?></p>                    
-              <span class="badge badge-hl font-weight-normal mr-2 rounded-0"><?php echo $dp; ?></span>
+              <span class="badge badge-hl font-weight-normal mr-2 rounded-0"><?php echo substr($headline[$i]['post_date'], 11, 5).' WIB'?></span>
           </div>
       </a>    
       <?php } ?>
