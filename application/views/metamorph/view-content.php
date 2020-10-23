@@ -42,12 +42,12 @@
 
       <div class="mt-2 mb-1">  
         <i class="fas fa-pen fa-xs"></i> PENULIS
-        <span class="img-photographer"><?php echo $article['post']['post_author_name'] ?></span>
-          &nbsp;&nbsp;<i class="fas fa-user-clock"></i> EDITOR
+        <span class="img-photographer"><?php echo $article['post']['post_author_name'] ?></span>          
           <?php if($article['post']['post_source'] != '') { ?>      
-          <span class="img-photographer">Source: <?php echo $article['post']['post_source']; ?></p>
-          <?php } ?></span>
+          &nbsp;&nbsp;<i class="fas fa-project-diagram"></i> SOURCE<span class="img-photographer"> <?php echo $article['post']['post_source']; ?></span>
+          <?php } ?>
           <?php if($article['post']['post_editor'] != '') { ?>
+          &nbsp;&nbsp;<i class="fas fa-user-clock"></i> EDITOR
           <span class="img-photographer"><?php echo $article['post']['nama']; ?></span>
           <?php } ?>
       </div>
@@ -60,8 +60,7 @@
 
       <div class="dashing mt-1 mb-1">  
         <span class="img-caption"><?php echo $article['post']['post_image_caption']; ?></span>
-        &nbsp;|&nbsp;<i class="fas fa-camera-retro fa-xs"></i>
-        <span class="img-photographer">Istimewa</span>
+        &nbsp;
       </div>
 
       <section>
@@ -74,6 +73,14 @@
           );
         ?>
       </section>
+
+                    <center><!-- google ads -->
+                      <div id='div-gpt-ad-1567136321673-0'>
+                        <script>
+                          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1567136321673-0'); });
+                        </script>
+                      </div>
+                    </center>
 
       <span><i class="fas fa-hashtag"></i> TAG TERKAIT</span>
       <div class="txt-tag">

@@ -40,7 +40,6 @@
 
 $route['default_controller'] 	= 'home';
 $route['404_override'] 			= 'page/error_404'; // default, set to empty
-
 $route['read/(.*)'] 			= 'read/index/$1'; // need to check
 
 // $route['category/(.*)'] 		= 'category/index/$1'; // need to check/ prettify and migrate!
@@ -70,7 +69,6 @@ $cat_uri = array(
 	'inovasi',
 	/* Main Category: Sehat */
 	'netizen',
-
 );
 
 foreach ($cat_uri as $c) {
@@ -86,7 +84,6 @@ $route['topic/(.*)']            = 'tag/index/$1'; // temporary purpose
 $route['author/(.*)']           = 'author/index/$1';
 // Is $route['season'] being used?
 // Is $route['related'] being used? -- Deprecated?
-
 $route['view/(.*)'] 			= 'view/index/$1'; // need to migrate
 $route['foto/view/(.*)']		= 'view/index/$1'; // migrated
 $route['foto']            		= 'photo/index'; // need to migrate
@@ -95,14 +92,12 @@ $route['foto/(.*)']				= 'photo/index/$1'; // paging purpose, need to migrate
 //$route['foto/view/(.*)']    	= "foto/view/$1";
 //$route['foto']   		    	= "foto/index";
 //$route['foto/(.*)']			= "foto/index/$1";
-
 $route['watch/(.*)'] 			= 'watch/index/$1'; // need to migrate
 $route['video/view/(.*)']		= 'watch/index/$1'; // migrated
 $route['video']            		= 'video/index';
 $route['video/(.*)']            = 'video/index/$1'; // paging purpose
 // Migrate Video
 //$route['video/view/(.*)']		= "video/view/$1";
-
 $route['index']            		= 'index/form';
 // $route['index/(.*)']            = 'index/form/$1'; // need to check
 $route['jadwal-imsak'] 			= "page/jadwal_imsak";
@@ -115,12 +110,9 @@ $route['pedoman-media-siber']	= "page/privacy_policy";
 $route['advertise']				= "page/advertise";
 $route['management-editorial']	= "page/management_editorial";
 $route['media-partner']			= "page/media_partner";
-
 $route['kuis-piala-dunia']		= "page/kuis_piala_dunia";
 $route['ayo-netizen']			= "page/ayo_netizen";
-
 // $route['rss']					= '';
-
 /*** [!] API Legacy ***/
 $route["api"]["get"]    		= "api/get";
 

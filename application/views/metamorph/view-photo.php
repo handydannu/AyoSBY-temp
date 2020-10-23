@@ -37,13 +37,12 @@
           <div class="mt-2 mb-1">  
             <i class="fas fa-pen fa-xs"></i> PENULIS
             <span class="img-photographer"><?php echo $photo['slide'][0]['nama'];?></span>
-              &nbsp;&nbsp;<i class="fas fa-user-clock"></i> EDITOR
-            <span class="img-photographer">
               <?php if($photo['slide'][0]['post_source'] != '') { ?>
-                    Source: <?php echo $photo['slide'][0]['post_source']; ?>
+                    &nbsp;&nbsp;<i class="fas fa-project-diagram"></i> SOURCE<span class="img-photographer"><?php echo $photo['slide'][0]['post_source']; ?></span>
                     <?php } ?>
+                    &nbsp;<i class="fas fa-user-clock"></i> EDITOR
                     <?php if($photo['slide'][0]['nama'] != '') { ?>
-                    Editor: <?php echo $photo['slide'][0]['nama']; ?>
+                    <span class="img-photographer"> <?php echo $photo['slide'][0]['nama']; ?></span>
               <?php } ?>
             </span>
           </div>
@@ -62,12 +61,18 @@
               <?php } ?>
 
           <section>
-
+            <center><!-- google ads -->
+                      <div id='div-gpt-ad-1567136321673-0'>
+                        <script>
+                          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1567136321673-0'); });
+                        </script>
+                      </div>
+                    </center>
           </section>
 
         <!-- article ads -->
         <div class="col-12">
-          <img class="shade img-fluid ads-rectangle" src="https://www.ayosurabaya.com/assets/img/widget/ayo-netizen.jpg">
+          <a href="<?php echo base_url();?>ayo-netizen"><img class="shade img-fluid ads-rectangle" src="https://www.ayosurabaya.com/assets/img/widget/ayo-netizen.jpg">
         </div><!-- article ads -->
         
         <!-- berita terkait -->

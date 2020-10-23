@@ -1,5 +1,4 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
-
 /**
  * @author alifiharafi[at]gmail[dot]com
  * For now, the category page only contains "article" post/ content type. 
@@ -13,12 +12,10 @@ class Category extends CI_Controller {
         parent::__construct();
         $this->load->library('Mobile_Detect');
 		$this->load->helper('cookie'); // for mobile detect and site view switcher purpose
-
         // TO DO: Load Model
         $this->load->model('article_model');
         $this->load->model('category_model');
     }
-
 	public function index()
 	{
 		/*** Redirect old URLs and check old URL is valid ***/
@@ -27,7 +24,6 @@ class Category extends CI_Controller {
 		if($this->uri->segment(1) == 'category' 
 			&& is_numeric($this->uri->segment(2)) && strlen($this->uri->segment(2)) > 0) { 
 			// echo 'This is valid old URL!';
-
 			// Restructure the old URIs to the new one.
 			$get_old_uri = array(
 				'post_id' 	=> $this->uri->segment(2), // we should skip the segment 3th, because we don't need it (the category_id)
@@ -143,7 +139,6 @@ class Category extends CI_Controller {
 		
 		$this->load->view($this->config->item('template_name') . 'view-newslist', $c);
 	}
-
 	/**
 	 * Generate Pagination Function
 	 * 
@@ -163,7 +158,7 @@ class Category extends CI_Controller {
 		$config['num_links'] = 5;
 
 		/* Appearance */
-		 $config['full_tag_open']    = '<div class="pagging text-center"><nav><ul class="pagination">';
+		$config['full_tag_open']    = '<div class="pagging text-center"><nav><ul class="pagination">';
 	    $config['full_tag_close']   = '</ul></nav></div>';
 	    $config['num_tag_open']     = '<li class="page-item"><span class="page-link">';
 	    $config['num_tag_close']    = '</span></li>';

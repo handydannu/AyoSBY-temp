@@ -36,13 +36,15 @@
            <div class="mt-2 mb-1">  
             <i class="fas fa-pen fa-xs"></i> SUMBER
             <span class="img-photographer"><?php echo $video[0]['source'];?></span>
-              &nbsp;&nbsp;<i class="fas fa-user-clock"></i> EDITOR
-            <span class="img-photographer">
-              <?php if($video[0]['source'] != '') { ?>
-                    Source: YouTube<?php ?>
+             <?php if($video[0]['source'] != '') { ?>
+              <i class="fab fa-youtube"></i>
+                    <span class="img-photographer">Source: YouTube</span>
                     <?php } ?>
                     <?php if($video[0]['nama'] != '') { ?>
-                    Editor: <?php echo $video[0]['nama']; ?>
+              &nbsp;&nbsp;<i class="fas fa-user-clock"></i> EDITOR
+            <span class="img-photographer">
+                    <?php echo $video[0]['nama']; ?>
+                  </span>
               <?php } ?>
             </span>
           </div>
@@ -65,6 +67,14 @@
                   ?>
           </p>          
           </section>
+
+            <center><!-- google ads -->
+                      <div id='div-gpt-ad-1567136321673-0'>
+                        <script>
+                          googletag.cmd.push(function() { googletag.display('div-gpt-ad-1567136321673-0'); });
+                        </script>
+                      </div>
+                    </center>
 
         <!-- article ads -->
         <div class="col-12">

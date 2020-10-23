@@ -2,7 +2,6 @@
 
 class Home extends CI_Controller
 {
-
 	function __construct()
 	{
 		parent::__construct();
@@ -45,7 +44,6 @@ class Home extends CI_Controller
 				$c['nav']['site_view_mobile'] = false;
 			}
 		}
-
 		// Content 
 		$c['headline']				= $this->article_model->get_headline_by_category(0, 5); // 0 => ALL
 		// $c['recent']				= $this->article_model->get_recent_by_category(0, 12); // article only
@@ -61,7 +59,6 @@ class Home extends CI_Controller
 		$c['video'] 				= $tmp['video']['data'];
 		unset($tmp); // need to check
 		// exit;
-
 		//$c['daerah']				= $this->article_model->get_recent_by_category(2, 5);
 		$c['surabaya_raya']			= $this->article_model->get_recent_by_category(1, 5);
 		$c['umkm']					= $this->article_model->get_recent_by_category(127, 6);
@@ -96,10 +93,10 @@ class Home extends CI_Controller
 		// _d($c['feed']);
 		// $c['jatim']						= $this->covid19->provinsi();
 		// $c['indonesia']					= $this->covid19->info();
+		//untuk load halaman utama
+		$this->load->view($this->config->item('template_name') . 'main-home', $c); 
 
-		$this->load->view($this->config->item('template_name') . 'main-home', $c);
 	}
-}
- 
+} 
 /* End of file home.php */
 /* Location: ./application/controllers/home.php */

@@ -102,9 +102,9 @@ class Tag extends CI_Controller {
 
 		// Content
 		$c['recent']					= $this->article_model->get_recent_by_category(0, 10); // 0 => ALL
-		$c['popular'] 					= $this->article_model->get_popular_by_category(0, 9); // 0 => ALL + Advertorial
+		$c['popular'] 					= $this->article_model->get_popular_by_category(0, 10); // 0 => ALL + Advertorial
 		if(empty($c['popular'])) {
-			$c['popular'] 				= $this->article_model->get_popular_monthly_by_category(0, 9); // 0 => ALL + Advertorial
+			$c['popular'] 				= $this->article_model->get_popular_monthly_by_category(0, 10); // 0 => ALL + Advertorial
 		}
 
 		// Query of Tag Meta
@@ -134,8 +134,9 @@ class Tag extends CI_Controller {
 
 		// Sidebar Content
 		$c['piala_dunia']				= $this->article_model->get_recent_by_category(82, 5);
+		$c['wisata']			 	= $this->article_model->get_recent_by_category(7, 5);
 
-		$this->load->view($this->config->item('template_name') . 'archive-tag', $c);
+		$this->load->view($this->config->item('template_name') . 'view-tag', $c);
 	}
 
 	/**
@@ -157,22 +158,21 @@ class Tag extends CI_Controller {
 		$config['num_links'] = 5;
 
 		/* Appearance */
-		$config['num_tag_open'] = '<li>';
-		$config['num_tag_close'] = '</li>';
-		$config['cur_tag_open'] = '<li><a class="active">';
-		$config['cur_tag_close'] = '</a></li>';
-		$config['first_tag_open'] = '<li>';
-		$config['first_tag_close'] = '</li>';
-		$config['last_tag_open'] = '<li class="hidden">';
-		$config['last_tag_close'] = '</li>';
-		$config['next_tag_open'] = '<li>';
-		$config['next_tag_close'] = '</li>';
-		$config['prev_tag_open'] = '<li>';
-		$config['prev_tag_close'] = '</li>';
-		$config['first_link'] = '&laquo; Awal';
-		$config['last_link'] = 'Akhir &raquo;';
-		$config['next_link'] = 'Selanjutnya &rsaquo;';
-		$config['prev_link'] = '&lsaquo; Sebelumnya';
+		$config['full_tag_open']    = '<div class="pagging text-center"><nav><ul class="pagination">';
+	    $config['full_tag_close']   = '</ul></nav></div>';
+	    $config['num_tag_open']     = '<li class="page-item"><span class="page-link">';
+	    $config['num_tag_close']    = '</span></li>';
+	    $config['cur_tag_open']     = '<li class="page-item active"><span class="page-link">';
+	    $config['cur_tag_close']    = '<span class="sr-only">(current)</span></span></li>';
+	    $config['next_tag_open']    = '<li class="page-item"><span class="page-link">';
+	    $config['next_tag_close']  = '<span aria-hidden="true"></span></span></li>';
+	    // $config['next_tag_close']  = '<span aria-hidden="true">&raquo;</span></span></li>';
+	    $config['prev_tag_open']    = '<li class="page-item"><span class="page-link">';
+	    $config['prev_tag_close']  = '</span></li>';
+	    $config['first_tag_open']   = '<li class="page-item"><span class="page-link">';
+	    $config['first_tag_close'] = '</span></li>';
+	    $config['last_tag_open']    = '<li class="page-item"><span class="page-link">';
+	    $config['last_tag_close']  = '</span></li></i></span>';
 		
 		$this->pagination->initialize($config);
 
