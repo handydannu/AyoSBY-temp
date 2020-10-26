@@ -37,6 +37,7 @@
               <a class="sub-footer-12" href="<?php echo site_url(); ?>advertise">advertise</a> •
               <a class="sub-footer-12" href="<?php echo site_url(); ?>media-partner">media partner</a> •
               <a class="sub-footer-12" href="https://ayobandung.com/carrer" target="_blank">carrer</a> •
+              <a class="sub-footer-12" href="<?php echo site_url(); ?>ayo-netizen">netizen</a> •
               <a class="sub-footer-12" href="https://ayobandung.com/contact-us" target="_blank">contact us</a> •
               <a class="sub-footer-12" href="<?php echo site_url(); ?>rss">rss</a> •
               <a class="sub-footer-12" href="http://ayomedianetwork.com/" target="_blank">ayo media network © 2020</a>
@@ -47,7 +48,7 @@
     </div><!-- footer row -->
 
 
-    <div>
+    <div><!-- ads bawah fixed -->
     <a id="fix-banner-bottom" href="#" target="_blank" title="AyoSurabaya">
       <img class="img-fluid" src="https://cdn.ayobandung.com/upload/bank_image/medium/BJB_Amazing_Sureprize.png?w=1197" class="img-responsive" title="" style="">
     </a>

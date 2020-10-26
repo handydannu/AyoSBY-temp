@@ -1,8 +1,6 @@
           <h4 class="pt-2">
             <a class="roll-link" href="#"><span data-title="LAINNYA >>"><i class="fas fa-flask"></i> INOVASI</span></a>
           </h4>
-
-
           <div class="mr-2">
             <a href="#">
             <img class="img-fluid headline-img-thumb shade" src="https://cdn.ayobandung.com/upload/bank_image/small/blt-tahap-4-kapan-giliran-bca-cair-ini-jawabannya_thumb.jpg" alt="Card image cap">
@@ -13,7 +11,6 @@
               </p>
             </div>
            </a>
-
           <a href="#">
           <img class="img-fluid headline-img-thumb shade" src="https://cdn.ayobandung.com/upload/bank_image/small/blt-tahap-4-kapan-giliran-bca-cair-ini-jawabannya_thumb.jpg" alt="Card image cap">
           <div>
@@ -23,7 +20,6 @@
             </p>
           </div>
          </a>
-
           <a href="#">
           <img class="img-fluid headline-img-thumb shade" src="https://cdn.ayobandung.com/upload/bank_image/small/unjuk-rasa-mahasiswa-tolak-omnibus-law-uu-cipta-kerja_thumb.jpg" alt="Card image cap">
           <div>

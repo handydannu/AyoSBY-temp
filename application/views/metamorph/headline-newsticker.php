@@ -3,7 +3,6 @@
           <span class="d-flex align-items-center"><i class="fas fa-fire"></i>&nbsp;BREAKING</span>
         </div>
         <div class="bg-light p-1">
-
         <marquee class="news-scroll mt-1" behavior="scroll" direction="left" scrollamount="7" onmouseover="this.stop();" onmouseout="this.start();"> 
 
         <?php // _d($recent); ?>
@@ -37,6 +36,5 @@
           <span class="dot"></span> 
           <a href="<?php echo $url; ?>"><?php echo $r['post_title']; ?></a> 
           <?php } ?> 
-        </marquee></div>
-        
+        </marquee></div>        
     </div>

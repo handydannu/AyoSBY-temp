@@ -7,7 +7,6 @@ class View extends CI_Controller {
         parent::__construct();
         $this->load->library('Mobile_Detect');		
 		$this->load->helper('cookie'); // for mobile detect and site view switcher purpose
-
         // TO DO: Load Model
         $this->load->model('article_model');
         $this->load->model('photo_model');
@@ -32,7 +31,6 @@ class View extends CI_Controller {
 				'post_id' 	=> $this->uri->segment(4),
 				'post_name' => $this->uri->segment(5) // this is not mandatory, sometimes empty/ removed/ skipped
 			);
-
 			// Redirect the old URIs to the new one (to the next condition).
 			header("HTTP/1.1 301 Moved Permanently"); 
 			header("location: " . site_url('view') . '/' . $get_old_uri['year'] . '/' . $get_old_uri['month'] . '/' . $get_old_uri['day'] . '/' . $get_old_uri['post_id'] . '/' . $get_old_uri['post_name']);
@@ -110,7 +108,6 @@ class View extends CI_Controller {
 		// _d($c['photo']);
 		// _d($c['photo']['related']['data']); exit;
 		// _d($c['photo']['related']['total_row']['count_photo']); exit;
-
 		// Sidebar Content
 		$c['piala_dunia']					= $this->article_model->get_recent_by_category(82, 5);
 		
@@ -123,12 +120,9 @@ class View extends CI_Controller {
                 'post_hits'        => 1,
                 'post_last_viewed' => date("Y-m-d H:i:s")
         );
-        $this->common_model->set_hit($data_hit); // temporarily not checked if it is working or not? return value has been prepared
-
+        $this->common_model->set_hit($data_hit); 
 		$this->load->view($this->config->item('template_name') . 'view-photo', $c);
 	}
-
 }
-
 /* End of file view.php */
 /* Location: ./application/controllers/view.php */

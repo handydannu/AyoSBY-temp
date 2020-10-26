@@ -9,7 +9,6 @@ class Page extends CI_Controller {
         parent::__construct();
         // $this->load->library('Mobile_Detect');		
 		// $this->load->helper('cookie'); // for mobile detect and site view switcher purpose
-
         // TO DO: Load Model
         $this->load->model('article_model');
         $this->load->model('common_model');
@@ -24,14 +23,11 @@ class Page extends CI_Controller {
 		if(empty($c['popular'])) {
 			$c['popular'] = $this->article_model->get_popular_monthly_by_category(0, 10);
 		}
-		$c['piala_dunia']				= $this->article_model->get_recent_by_category(82, 5);
-		
-		$c['wisata']			 	= $this->article_model->get_recent_by_category(7, 5);
-		$c['netizen']			 	= $this->article_model->get_recent_by_category(10, 8);
-
+		$c['piala_dunia']	= $this->article_model->get_recent_by_category(82, 5);		
+		$c['wisata']		= $this->article_model->get_recent_by_category(7, 5);
+		$c['netizen']		= $this->article_model->get_recent_by_category(10, 8);
 		$this->c = $c;
     }
-
 	public function index()
 	{
 		// securing the default page
@@ -41,22 +37,18 @@ class Page extends CI_Controller {
 	{
 		$this->load->view($this->config->item('template_name') . 'page/jadwal-imsak', $this->c);
 	}
-
 	public function pencarian()
 	{
 		$this->load->view($this->config->item('template_name') . 'page/view-cari', $this->c);
-	}
-	
+	}	
 	public function about_us()
 	{
 		$this->load->view($this->config->item('template_name') . 'page/about-us', $this->c);
 	}
-
 	public function management_editorial()
 	{
 		$this->load->view($this->config->item('template_name') . 'page/management-editorial', $this->c);
 	}
-
 	public function terms_conditions()
 	{
 		$this->load->view($this->config->item('template_name') . 'page/terms-conditions', $this->c);
@@ -66,7 +58,6 @@ class Page extends CI_Controller {
 	{
 		$this->load->view($this->config->item('template_name') . 'page/privacy-policy', $this->c);
 	}
-
 	public function advertise()
 	{
 		$this->load->view($this->config->item('template_name') . 'page/advertise', $this->c);
@@ -76,7 +67,6 @@ class Page extends CI_Controller {
 	{
 		$this->load->view($this->config->item('template_name') . 'page/media-partner', $this->c);
 	}
-
 	public function kuis_piala_dunia()
 	{
 		$this->load->view($this->config->item('template_name') . 'page/kuis-piala-dunia', $this->c);
@@ -85,18 +75,15 @@ class Page extends CI_Controller {
 	public function ayo_netizen()
 	{
 		$this->load->view($this->config->item('template_name') . 'page/ayo-netizen', $this->c);
-	}
-	
+	}	
 	public function debug_()
 	{
 		echo ENVIRONMENT;
 	}
-
 	public function error_404()
 	{
 		$this->load->view($this->config->item('template_name') . 'page/page-404');
 	}
-
 }
 
 /* End of file page.php */

@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 <meta http-equiv="refresh" content="900" />
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">        
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">   
 <meta name="description" content="<?php echo $meta['desc']; ?>" />
 <meta name="keywords" content="<?php echo $meta['keyword']; ?>" />
 <meta name="author" content="<?php echo $this->config->item('page_meta')['site_author']; ?>" />
@@ -26,14 +26,14 @@
 <?php meta_ogp(); ?>
 <?php echo (isset($meta['canonical']) || $meta['canonical'] != '') ? $meta['canonical'] : ''; ?>
 
-<link rel="apple-touch-icon" href="http://localhost/ayosurabaya/apple-touch-icon.png">
-<link rel="shortcut icon" href="http://localhost/ayosurabaya/assets/img/footer-logo.png">
+<link rel="apple-touch-icon" href="<?php echo site_url(); ?>apple-touch-icon.png">
+<link rel="shortcut icon" href="<?php echo site_url(); ?>assets/img/footer-logo.png">
 
 <!-- css -->
-<link rel="stylesheet" href="http://localhost/ayosurabaya/assets/css/bootstrap.min.css">
-<link rel="stylesheet" href="http://localhost/ayosurabaya/assets/css/surabaya.css">
-<link rel="stylesheet" href="http://localhost/ayosurabaya/assets/fontawesome/css/all.css">
-<link rel="icon" href="http://localhost/ayosurabaya/assets/img/footer-logo.png" type="image/x-icon"/ >
+<link rel="stylesheet" href="<?php echo site_url(); ?>assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="<?php echo site_url(); ?>assets/css/surabaya.css">
+<link rel="stylesheet" href="<?php echo site_url(); ?>assets/fontawesome/css/all.css">
+<link rel="icon" href="<?php echo site_url(); ?>assets/img/footer-logo.png" type="image/x-icon"/ >
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">   
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" integrity="sha512-mSYUmp1HYZDFaVKK//63EcZq4iFWFjxSL+Z3T/aCt4IO9Cejm03q3NKKYN6pFQzY0SBOr8h+eCIAZHPXcpZaNw==" crossorigin="anonymous" />
 
@@ -81,7 +81,6 @@
 		appendMessage(payload);
 		// [END_EXCLUDE]
 	});
-
 	// self.addEventListener('appendMessage', function(e) {
 	// 	console.log('explore', e.notification);
 	// 	var notification = e.notification;
@@ -95,7 +94,6 @@
 	// 		notification.close();
 	// 	}
 	// });
-
 	// [END receive_message]
 	function resetUI() {
 		// clearMessages();
@@ -123,7 +121,6 @@
 		});
 		// [END get_token]
 	}
-
 	function addSubscribeToTopic(token, topic) {
 		fetch('https://iid.googleapis.com/iid/v1/' + token + '/rel/topics/' + topic, {
 			method: 'POST',
@@ -139,7 +136,6 @@
 			console.error(error);
 		});
 	}
-
 	function requestPermission() {
 		console.log('Requesting permission...');
 		// [START request_permission]
@@ -156,7 +152,6 @@
 		});
 		// [END request_permission]
 	}
-
 	function deleteToken() {
 		// Delete Instance ID token.
 		// [START delete_token]
@@ -221,7 +216,6 @@
 			};
 			return reg.showNotification(payload.notification.title, options);
 		});
-
 		// messaging.setBackgroundMessageHandler(function(payload) {
 		// console.log('[firebase-messaging-sw.js] Received background message ', payload);
 		// // Customize notification here
@@ -238,9 +232,7 @@
 	requestPermission();
 	// resetUI();
 </script>
-
 <script data-ad-client="ca-pub-6344910443143463" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
 <!--Adomik randomizer for ad call key value targeting-->
 <script type='text/javascript'>
 	window.Adomik = window.Adomik || {};
@@ -256,7 +248,6 @@
 		}
 	};
 </script>
-
 <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
 <script>
 	window.googletag = window.googletag || {

@@ -1,5 +1,4 @@
 <div class="container">
-
   <!-- ads top -->
   <div id="fix-banner-top">
     <a href="#" target="_blank" title="AyoSurabaya">

@@ -7,7 +7,6 @@ class Photo extends CI_Controller {
         parent::__construct();
         $this->load->library('Mobile_Detect');
 		$this->load->helper('cookie'); // for mobile detect and site view switcher purpose
-
         // TO DO: Load Model
         $this->load->model('article_model');
         $this->load->model('photo_model');
@@ -95,7 +94,6 @@ class Photo extends CI_Controller {
 		$this->load->view($this->config->item('template_name') . 'view-photolist', $c);
 		// $this->load->view('welcome_message');
 	}
-
 	/**
 	 * Generate Pagination Function
 	 * 
@@ -115,28 +113,26 @@ class Photo extends CI_Controller {
 		$config['num_links'] = 5;
 
 		/* Appearance */
-		 $config['full_tag_open']    = '<div class="pagging text-center"><nav><ul class="pagination">';
+		 $config['full_tag_open']   = '<div class="pagging text-center"><nav><ul class="pagination">';
 	    $config['full_tag_close']   = '</ul></nav></div>';
 	    $config['num_tag_open']     = '<li class="page-item"><span class="page-link">';
 	    $config['num_tag_close']    = '</span></li>';
 	    $config['cur_tag_open']     = '<li class="page-item active"><span class="page-link">';
 	    $config['cur_tag_close']    = '<span class="sr-only">(current)</span></span></li>';
 	    $config['next_tag_open']    = '<li class="page-item"><span class="page-link">';
-	    $config['next_tag_close']  = '<span aria-hidden="true"></span></span></li>';
+	    $config['next_tag_close']  	= '<span aria-hidden="true"></span></span></li>';
 	    // $config['next_tag_close']  = '<span aria-hidden="true">&raquo;</span></span></li>';
 	    $config['prev_tag_open']    = '<li class="page-item"><span class="page-link">';
-	    $config['prev_tag_close']  = '</span></li>';
+	    $config['prev_tag_close']  	= '</span></li>';
 	    $config['first_tag_open']   = '<li class="page-item"><span class="page-link">';
-	    $config['first_tag_close'] = '</span></li>';
+	    $config['first_tag_close'] 	= '</span></li>';
 	    $config['last_tag_open']    = '<li class="page-item"><span class="page-link">';
-	    $config['last_tag_close']  = '</span></li></i></span>';
+	    $config['last_tag_close']  	= '</span></li></i></span>';
 		
 		$this->pagination->initialize($config);
 
 		return $this->pagination->create_links();
 	}
-
 }
-
 /* End of file photo.php */
 /* Location: ./application/controllers/photo.php */

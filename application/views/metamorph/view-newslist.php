@@ -20,7 +20,6 @@
         <h4 class="pt-2 mml-1 text-uppercase">
           <span data-title="LAINNYA >>"><i class="far fa-newspaper"></i> <?php echo $cmeta['category_name']; ?></span>
         </h4>
-
       <div class="row">
         <!-- list berita -->
 
@@ -43,23 +42,16 @@
           </p>
         </div><!-- number 1 -->
         <div class="col-lg-12"><hr class="lb-0"></div>        
-        <?php } ?>       
-                  
+        <?php } ?>                    
 
       </div><!-- list berita -->
-
         <?php if ($page['links'] != '') { ?>          
         <?php echo $page['links']; ?>
-        <?php } ?>
-             
-
+        <?php } ?>            
     </div>
 
       <!-- right sidebar --> 
     <?php $this->load->view($this->config->item('template_name') . 'sidebar-right-inner'); ?>
-
   </div>
-
 </div><!-- /.container 1 -->
-
 <?php $this->load->view($this->config->item('template_name') . 'main-bottom'); ?> 

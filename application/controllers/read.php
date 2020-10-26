@@ -7,7 +7,6 @@ class Read extends CI_Controller {
         parent::__construct();
         $this->load->library('Mobile_Detect');		
 		$this->load->helper('cookie'); // for mobile detect and site view switcher purpose
-
         // TO DO: Load Model
         $this->load->model('article_model');
         $this->load->model('category_model'); // for now just for article type content
@@ -23,7 +22,6 @@ class Read extends CI_Controller {
 			&& is_numeric($this->uri->segment(3)) && strlen($this->uri->segment(3)) > 0 
 			&& is_numeric($this->uri->segment(4)) && $this->uri->segment(4) > 0) { 
 			// echo 'This is valid old URL!';
-
 			// Restructure the old URIs to the new one.
 			$get_old_uri = array(
 				'year' 		=> substr($this->uri->segment(2), 0, 4),
@@ -102,7 +100,6 @@ class Read extends CI_Controller {
 				$c['nav']['site_view_mobile'] = false;  
 			}
 		}
-
 		// Content
 		$c['recent']						= $this->article_model->get_recent_by_category(0, 10); // 0 => ALL
 		$c['popular'] 						= $this->article_model->get_popular_by_category(0, 10); // 0 => ALL + Advertorial
@@ -111,7 +108,6 @@ class Read extends CI_Controller {
 		}
 
 		$c['article']						= $this->article_model->get_by_id($get_uri['post_id']);
-		// Need to check the post before displayed on a page. If the query couldn't return any data, will be redirected to the page not found. This is needed for security purpose too.
 		if(empty($c['article']['post']) && empty($c['article']['tags'])){ // empty array contains 'post' and 'tags' sub-elements
 			show_404();
 		}
@@ -123,12 +119,12 @@ class Read extends CI_Controller {
 		// _d(count($c['article']['tags'])); exit;
 
 		$c['article']['related'] 			= $this->article_model->get_related_by_keyword( // you can set keyword param, such as tags, categories, keywords, combination of title and summary, and others as well
-												$c['article']['post']['post_title'], 
-												// $c['article']['post']['post_summary'],
-												$limit = 8,
-												$exception = $c['article']['post']['post_id'] // avoid current post not getting retrieved
-												// $c['article']['tags']
-											); 
+									$c['article']['post']['post_title'], 
+									// $c['article']['post']['post_summary'],
+									$limit = 8,
+									$exception = $c['article']['post']['post_id'] // avoid current post not getting retrieved
+									// $c['article']['tags']
+								   ); 
 		// $c['article']['related'] 			= $this->article_model->get_related_by_tags(
 		// 										$limit = 10,
 		// 										$exception = $c['article']['post']['post_id'],
@@ -138,8 +134,8 @@ class Read extends CI_Controller {
 
 		// Sidebar Content
 		// $c['piala_dunia']				= $this->article_model->get_recent_by_category(82, 5);
-		$c['netizen']				= $this->article_model->get_recent_by_category(7, 8);
-		$c['wisata']				= $this->article_model->get_recent_by_category(27, 6);
+		$c['netizen']			= $this->article_model->get_recent_by_category(7, 8);
+		$c['wisata']			= $this->article_model->get_recent_by_category(27, 6);
 		// Set Visitor Hit
 		date_default_timezone_set('Asia/Jakarta');
         $data_hit = array(
@@ -148,11 +144,9 @@ class Read extends CI_Controller {
                 'post_hits'        => 1,
                 'post_last_viewed' => date("Y-m-d H:i:s")
         );
-        $this->common_model->set_hit($data_hit); // temporarily not checked if it is working or not? return value has been prepared
-
+        $this->common_model->set_hit($data_hit); 
 		$this->load->view($this->config->item('template_name') . 'view-content', $c);
 	}
 }
-
 /* End of file read.php */
 /* Location: ./application/controllers/read.php */

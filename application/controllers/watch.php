@@ -7,13 +7,11 @@ class Watch extends CI_Controller {
         parent::__construct();
         $this->load->library('Mobile_Detect');		
 		$this->load->helper('cookie'); // for mobile detect and site view switcher purpose
-
         // TO DO: Load Model
         $this->load->model('article_model');
         $this->load->model('video_model');
         $this->load->model('common_model');
     }
-
 	public function index()
 	{
 		/*** Redirect old URLs and check old URL is valid ***/
@@ -85,16 +83,13 @@ class Watch extends CI_Controller {
 						$get_uri['video'] = 'video/view/';
 					} else {
 						$get_uri['video'] = 'watch/';
-					}
-
-					// OMG! it will be redirected automatically to /video page, because there are no single page for video!
+					}					
 					header("location: " . $this->config->item('site_mobile') . $get_uri['video'] . $get_uri['year'] . '/' . $get_uri['month'] . '/' . $get_uri['day'] . '/' . $get_uri['post_id'] . '/' . $get_uri['post_name']);
 					//exit;
 				}
 				$c['nav']['site_view_mobile'] = false;  
 			}
 		}
-
 		// Content
 		$c['recent']						= $this->article_model->get_recent_by_category(0, 10); // 0 => ALL
 		$c['popular'] 						= $this->article_model->get_popular_by_category(0, 10); // 0 => ALL + Advertorial
@@ -107,17 +102,14 @@ class Watch extends CI_Controller {
 			show_404();
 		}
 		// _d($c['video']); exit;
-
-		// Temporarily related videos using recent videos. Exclude this post_id. Up one level from 'data' dimension
 		$c['video']['related']				= $this->video_model->get_recent(8, 0, $get_uri['post_id'])['data']; // video_id
 		// _d($c['video']['related']); exit;
 		// _d($c['video']['related']['data']); exit;
 		// _d($c['video']['related']['total_row']['count_photo']); exit;
 
 		// Sidebar Content
-		$c['piala_dunia']					= $this->article_model->get_recent_by_category(82, 5);
-		
-		$c['wisata']				= $this->article_model->get_recent_by_category(27, 6);
+		$c['piala_dunia']		= $this->article_model->get_recent_by_category(82, 5);	
+		$c['wisata']			= $this->article_model->get_recent_by_category(27, 6);
 		// Set Visitor Hit
 		date_default_timezone_set('Asia/Jakarta');
         $data_hit = array(
@@ -131,6 +123,5 @@ class Watch extends CI_Controller {
 		$this->load->view($this->config->item('template_name') . 'view-video', $c);
 	}
 }
-
 /* End of file watch.php */
 /* Location: ./application/controllers/watch.php */

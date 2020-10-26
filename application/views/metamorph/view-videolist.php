@@ -14,47 +14,40 @@
        <section class="mt-3">
     <div class="row">
        <?php for($i = 0; $i < count($video); $i++) { ?>
-                    <?php
-                      $dc = content_time($video[$i]['date']);
-                      $dp = id_time($video[$i]['date']);
+          <?php
+            $dc = content_time($video[$i]['date']);
+            $dp = id_time($video[$i]['date']);
 
-                      $url = site_url('watch') . '/' . $dc['year'] . '/' . $dc['month'] . '/' . $dc['day'] . '/' . $video[$i]['video_id'] . '/' . $video[$i]['name'];
-                      $url_img = 'http://i.ytimg.com/vi/' . $video[$i]['video'] . '/hqdefault.jpg';
-                    ?>
-      
+            $url = site_url('watch') . '/' . $dc['year'] . '/' . $dc['month'] . '/' . $dc['day'] . '/' . $video[$i]['video_id'] . '/' . $video[$i]['name'];
+            $url_img = 'http://i.ytimg.com/vi/' . $video[$i]['video'] . '/hqdefault.jpg';
+          ?>      
         <div class="col-lg-6 col-md-6 col-sm-6">
         <a href="<?php echo $url; ?>">
         <img class="img-fluid post-img shade" src="<?php echo $url_img; ?>">
-        <span class="date-posted" style="color: #000;"> <?php echo $dp; ?></span>
-        <h5>
-          <?php echo $video[$i]['title']; ?>
-        </h5>
-      </a>
+        </a>
+        <span class="date-posted"><i class="fas fa-clock"></i>&nbsp;<?php echo $dp; ?></span>
+        <h5 class="text-dark">
+            <a href="<?php echo $url; ?>"><?php echo $video[$i]['title']; ?></a>
+        </h5>      
        </div>
       <?php } ?>
-
-
     </div>
   </section>
 
-
-      <?php if ($page['links'] != '') { ?>
-          <div class="row">
-            <div class="col-md-12">
-              <ul>
-                <?php echo $page['links']; ?>
-              </ul>
-            </div>
+    <?php if ($page['links'] != '') { ?>
+        <div class="row">
+          <div class="col-md-12">
+            <ul>
+              <?php echo $page['links']; ?>
+            </ul>
           </div>
-          <?php } ?>
+        </div>
+    <?php } ?>
 
     </div><!-- end col read -->
 
-      <!-- right sidebar --> 
+    <!-- right sidebar --> 
     <?php $this->load->view($this->config->item('template_name') . 'sidebar-right-inner'); ?>
-
   </div>
-
 </div><!-- /.container 1 -->
-
 <?php $this->load->view($this->config->item('template_name') . 'main-bottom'); ?> 

@@ -70,8 +70,5 @@
               </span>
             </div>      
             <?php } ?>
-
-          </div>
-          
-           
+          </div>      
         </div><!-- end hot news -->

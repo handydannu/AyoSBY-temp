@@ -13,7 +13,6 @@ class Tag extends CI_Controller {
         parent::__construct();
         $this->load->library('Mobile_Detect');
 		$this->load->helper('cookie'); // for mobile detect and site view switcher purpose
-
         // TO DO: Load Model
         $this->load->model('article_model');
         $this->load->model('tag_model');
@@ -101,17 +100,16 @@ class Tag extends CI_Controller {
 		}
 
 		// Content
-		$c['recent']					= $this->article_model->get_recent_by_category(0, 10); // 0 => ALL
-		$c['popular'] 					= $this->article_model->get_popular_by_category(0, 10); // 0 => ALL + Advertorial
+		$c['recent']		= $this->article_model->get_recent_by_category(0, 10); // 0 => ALL
+		$c['popular'] 		= $this->article_model->get_popular_by_category(0, 10); // 0 => ALL + Advertorial
 		if(empty($c['popular'])) {
-			$c['popular'] 				= $this->article_model->get_popular_monthly_by_category(0, 10); // 0 => ALL + Advertorial
+			$c['popular'] 	= $this->article_model->get_popular_monthly_by_category(0, 10); // 0 => ALL + Advertorial
 		}
 
 		// Query of Tag Meta
 		// _d($get_uri);
 		$c['tmeta'] 					= $this->tag_model->get_by_name($get_uri['post_name']);
 		// _d($c['tmeta']); exit;
-
 		if(empty($c['tmeta'])) {
 			show_404(); // we didn't get what we want, so just throw it to the page not found
 		}
@@ -127,11 +125,9 @@ class Tag extends CI_Controller {
 											$offset // for pagination purpose
 										);
 		// _d($c['tag']); exit;
-
 		$c['page']['count'] 			= $this->article_model->count_all_by_tag($c['tmeta']['tag_id'], $active = 1);
 		$c['page']['links']				= $this->generate_pagination($c['page']['count'], $page_limit);
 		// _d($c['page']); exit;
-
 		// Sidebar Content
 		$c['piala_dunia']				= $this->article_model->get_recent_by_category(82, 5);
 		$c['wisata']			 	= $this->article_model->get_recent_by_category(7, 5);
@@ -156,7 +152,6 @@ class Tag extends CI_Controller {
 		$config['uri_segment'] = 3;
 		$config['use_page_numbers'] = TRUE;
 		$config['num_links'] = 5;
-
 		/* Appearance */
 		$config['full_tag_open']    = '<div class="pagging text-center"><nav><ul class="pagination">';
 	    $config['full_tag_close']   = '</ul></nav></div>';
@@ -165,14 +160,13 @@ class Tag extends CI_Controller {
 	    $config['cur_tag_open']     = '<li class="page-item active"><span class="page-link">';
 	    $config['cur_tag_close']    = '<span class="sr-only">(current)</span></span></li>';
 	    $config['next_tag_open']    = '<li class="page-item"><span class="page-link">';
-	    $config['next_tag_close']  = '<span aria-hidden="true"></span></span></li>';
-	    // $config['next_tag_close']  = '<span aria-hidden="true">&raquo;</span></span></li>';
+	    $config['next_tag_close']  	= '<span aria-hidden="true"></span></span></li>';
 	    $config['prev_tag_open']    = '<li class="page-item"><span class="page-link">';
-	    $config['prev_tag_close']  = '</span></li>';
+	    $config['prev_tag_close']  	= '</span></li>';
 	    $config['first_tag_open']   = '<li class="page-item"><span class="page-link">';
-	    $config['first_tag_close'] = '</span></li>';
+	    $config['first_tag_close'] 	= '</span></li>';
 	    $config['last_tag_open']    = '<li class="page-item"><span class="page-link">';
-	    $config['last_tag_close']  = '</span></li></i></span>';
+	    $config['last_tag_close']  	= '</span></li></i></span>';
 		
 		$this->pagination->initialize($config);
 
@@ -180,6 +174,5 @@ class Tag extends CI_Controller {
 	}
 	
 }
-
 /* End of file tag.php */
 /* Location: ./application/controllers/tag.php */

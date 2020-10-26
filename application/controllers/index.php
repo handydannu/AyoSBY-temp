@@ -13,19 +13,11 @@ class Index extends CI_Controller {
         parent::__construct();
         $this->load->library('Mobile_Detect');		
 		$this->load->helper('cookie'); // for mobile detect and site view switcher purpose
-
         // TO DO: Load Model
         $this->load->model('article_model'); // for now just for article type content
         $this->load->model('content_model'); // for now just for article type content
         // $this->load->model('common_model');
     }
-
-    // We got bug that index function couldn't called inside index controller.
-	/*public function index_()
-	{
-		$this->load->view('welcome_message');
-	}*/
-
 	public function form()
 	{
 		// Mobile Detect and Switcher
@@ -55,7 +47,6 @@ class Index extends CI_Controller {
 				$c['nav']['site_view_mobile'] = false;  
 			}
 		}
-
 		// Retrieve User Input
 		if( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
 			$c['input_date'] 	= $this->input->post('input_date');
@@ -63,7 +54,6 @@ class Index extends CI_Controller {
 			$c['q_input_date'] 	= substr($c['input_date'], 6, 4) // year 
                                 . '-' . substr($c['input_date'], 3, 2) // month
                                 . '-' .  substr($c['input_date'], 0, 2); // date
-
 			$c['category_id'] 	= $this->input->post('category_id');
 			// _d($c); exit;
 		} else {
@@ -73,30 +63,28 @@ class Index extends CI_Controller {
 			$c['input_date'] 	= date('d/m/Y'); // content input date
 			$c['category_id'] 	= 0;
 		}
-
 		// Content
 		$c['recent']						= $this->article_model->get_recent_by_category(0, 10); // for newsticker
 		
 		$index_limit 						= $this->config->item('index_limit');
 		$c['index']							= $this->content_model->get_recent_by_category(
-																					$c['category_id'], 
-																					$index_limit, 
-																					0, 
-																					$c['q_input_date']
-																				);
+									$c['category_id'], 
+									$index_limit, 
+									0, 
+									$c['q_input_date']
+								);
 		// _d($c['index']);
 		// _d($c['input_date']);
-		$c['popular'] 						= $this->article_model->get_popular_by_category(0, 9);
+		$c['popular'] 						= $this->article_model->get_popular_by_category(0, 10);
 		if(empty($c['popular'])) {
 			$c['popular'] 					= $this->article_model->get_popular_monthly_by_category(0, 10); // 0 => ALL + Advertorial
 		}
 
 
 		// Sidebar Content
-		$c['piala_dunia']				= $this->article_model->get_recent_by_category(82, 5);
-		$c['netizen']			 	= $this->article_model->get_recent_by_category(10, 8);
-		$c['wisata']			 	= $this->article_model->get_recent_by_category(7, 5);
-
+		$c['piala_dunia']		= $this->article_model->get_recent_by_category(82, 5);	
+		$c['netizen']			= $this->article_model->get_recent_by_category(10, 8);
+		$c['wisata']			= $this->article_model->get_recent_by_category(7, 5);
 		$this->load->view($this->config->item('template_name') . 'view-indeks', $c);
 	}
 
@@ -138,7 +126,6 @@ class Index extends CI_Controller {
 			$c['q_input_date'] 	= substr($c['input_date'], 6, 4) // year 
                                 . '-' . substr($c['input_date'], 3, 2) // month
                                 . '-' .  substr($c['input_date'], 0, 2); // date
-
 			$c['category_id'] 	= $this->input->post('category_id');
 			// _d($c); exit;
 		} else {
@@ -160,26 +147,22 @@ class Index extends CI_Controller {
 		
 		$index_limit 						= $this->config->item('index_limit');
 		$c['index'] 						= $this->content_model->get_recent_by_category(
-																					$c['category_id'], 
-																					$index_limit, 
-																					0, 
-																					$c['q_input_date']
-																				);
-		
+									$c['category_id'], 
+									$index_limit, 
+									0, 
+									$c['q_input_date']
+								);		
 		// _d($c['index']);
 		// _d($c['input_date']);
-		$c['popular'] 						= $this->article_model->get_popular_by_category(0, 9);
+		$c['popular'] 						= $this->article_model->get_popular_by_category(0, 10);
 		if(empty($c['popular'])) {
 			$c['popular'] 					= $this->article_model->get_popular_monthly_by_category(0, 10); // 0 => ALL + Advertorial
 		}
-
-
 		// Sidebar Content
 		$c['piala_dunia']				= $this->article_model->get_recent_by_category(82, 5);
 
 		$this->load->view($this->config->item('template_name') . 'view-indeks', $c);
 	}
 }
-
 /* End of file index.php */
 /* Location: ./application/controllers/index.php */

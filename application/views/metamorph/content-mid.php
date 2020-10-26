@@ -2,9 +2,9 @@
     <!-- berita terbaru -->        
   	<?php $this->load->view($this->config->item('template_name') . 'latest-news'); ?>
     <!-- BAGIAN PERSEBAYA TERBARU -->        
-  	<?php $this->load->view($this->config->item('template_name') . 'latest-persebaya'); ?>      
+  	<?php $this->load->view($this->config->item('template_name') . 'latest-persebaya'); ?>
     <!-- hot news -->              
-  	<?php $this->load->view($this->config->item('template_name') . 'latest-hotnews'); ?>        
-    <!-- gaya hidup --> 
+  	<?php $this->load->view($this->config->item('template_name') . 'latest-hotnews'); ?>  
+    <!-- latest video --> 
   	<?php $this->load->view($this->config->item('template_name') . 'latest-video'); ?>    
 </div>

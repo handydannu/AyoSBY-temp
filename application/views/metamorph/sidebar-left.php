@@ -1,7 +1,7 @@
 <!-- sidebar kiri hilang kalau mobile -->
 <div class="col-lg-2 col-sm-12 mt-3 fading">  
   <!-- banner vertical -->           
-  <?php $this->load->view($this->config->item('template_name') . 'banner-ver'); ?>         
+  <?php $this->load->view($this->config->item('template_name') . 'banner-ver'); ?>        
   <!-- latest netizen -->
   <?php $this->load->view($this->config->item('template_name') . 'latest-netizen'); ?>    
   <!-- banner vertical sticky -->        

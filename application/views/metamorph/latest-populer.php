@@ -14,9 +14,11 @@
 
       // _d($url_img . $p['post_image_thumb']);
     ?>
-    <li class="list-group-item">
-     
-    <span class="list-numb"><?php echo $bil; ?></span><a href="<?php echo $url; ?>" class="sub-head-16"><?php echo $p['post_title']; ?></a>
+    <li class="list-group-item">     
+      <span class="list-numb"><?php echo $bil; ?></span>
+        <a href="<?php echo $url; ?>" class="sub-head-16">
+          <?php echo $p['post_title']; ?>        
+        </a>
     </li>
     <?php } ?>
 </ul>

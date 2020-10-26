@@ -852,4 +852,11 @@ p{
 .gsc-search-button-v2:focus {
   border-color: #35579f;background-color: #35579f;
 }
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #35579f;
+    border-color: #35579f;
+}
 /* END CSS AYOSURABAYA */

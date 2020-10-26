@@ -7,7 +7,6 @@ class Video extends CI_Controller {
         parent::__construct();
         $this->load->library('Mobile_Detect');
 		$this->load->helper('cookie'); // for mobile detect and site view switcher purpose
-
         // TO DO: Load Model
         $this->load->model('article_model');
         $this->load->model('video_model');
@@ -55,10 +54,10 @@ class Video extends CI_Controller {
 		}
 
 		// Content
-		$c['recent']					= $this->article_model->get_recent_by_category(0, 10); // 0 => ALL
-		$c['popular'] 					= $this->article_model->get_popular_by_category(0, 10); // 0 => ALL + Advertorial
+		$c['recent']			= $this->article_model->get_recent_by_category(0, 10); // 0 => ALL
+		$c['popular'] 			= $this->article_model->get_popular_by_category(0, 10); // 0 => ALL + Advertorial
 		if(empty($c['popular'])) {
-			$c['popular'] 				= $this->article_model->get_popular_monthly_by_category(0, 10); // 0 => ALL + Advertorial
+			$c['popular'] 		= $this->article_model->get_popular_monthly_by_category(0, 10); // 0 => ALL + Advertorial
 		}
 
 		$page_limit = 10;
@@ -67,32 +66,29 @@ class Video extends CI_Controller {
 			$offset = ((int)$this->uri->segment(2) * $page_limit) - $page_limit;
 		}
 
-		$c['video']						= $this->video_model->get_recent(
-											$page_limit,
-											$offset // for pagination purpose
+		$c['video']				= $this->video_model->get_recent(
+										$page_limit,
+										$offset // for pagination purpose
 										);
 		// _d($c['video']); exit;
 		if($c['video'] <= 0) {
 			show_404();
 			exit;
 		}
-
-		$tmp['count']					= $c['video']['total_row']['count_video'];
+		$tmp['count']			= $c['video']['total_row']['count_video'];
 		if($tmp['count'] <= 0) {
 			show_404();
 			exit;
 		}
 
-		$c['video'] 					= $c['video']['data']; 
+		$c['video'] 			= $c['video']['data']; 
 		// _d($c['video']); exit;
-
-		$c['page']['count'] 			= $tmp['count'];
-		$c['page']['links']				= $this->generate_pagination($c['page']['count'], $page_limit);
+		$c['page']['count'] 	= $tmp['count'];
+		$c['page']['links']		= $this->generate_pagination($c['page']['count'], $page_limit);
 		unset($tmp);
 
 		// Sidebar Content
-		$c['piala_dunia']				= $this->article_model->get_recent_by_category(82, 5);
-
+		$c['piala_dunia']		= $this->article_model->get_recent_by_category(82, 5);
 		$this->load->view($this->config->item('template_name') . 'view-videolist', $c);
 		// $this->load->view('welcome_message');
 	}
@@ -116,28 +112,25 @@ class Video extends CI_Controller {
 		$config['num_links'] = 5;
 
 		/* Appearance */
-		 $config['full_tag_open']    = '<div class="pagging text-center"><nav><ul class="pagination">';
+		 $config['full_tag_open']   = '<div class="pagging text-center"><nav><ul class="pagination">';
 	    $config['full_tag_close']   = '</ul></nav></div>';
 	    $config['num_tag_open']     = '<li class="page-item"><span class="page-link">';
 	    $config['num_tag_close']    = '</span></li>';
 	    $config['cur_tag_open']     = '<li class="page-item active"><span class="page-link">';
 	    $config['cur_tag_close']    = '<span class="sr-only">(current)</span></span></li>';
 	    $config['next_tag_open']    = '<li class="page-item"><span class="page-link">';
-	    $config['next_tag_close']  = '<span aria-hidden="true"></span></span></li>';
-	    // $config['next_tag_close']  = '<span aria-hidden="true">&raquo;</span></span></li>';
+	    $config['next_tag_close']  	= '<span aria-hidden="true"></span></span></li>';
 	    $config['prev_tag_open']    = '<li class="page-item"><span class="page-link">';
-	    $config['prev_tag_close']  = '</span></li>';
+	    $config['prev_tag_close']  	= '</span></li>';
 	    $config['first_tag_open']   = '<li class="page-item"><span class="page-link">';
-	    $config['first_tag_close'] = '</span></li>';
+	    $config['first_tag_close']	= '</span></li>';
 	    $config['last_tag_open']    = '<li class="page-item"><span class="page-link">';
-	    $config['last_tag_close']  = '</span></li></i></span>';
+	    $config['last_tag_close']  	= '</span></li></i></span>';
 		
 		$this->pagination->initialize($config);
 
 		return $this->pagination->create_links();
 	}
-
 }
-
 /* End of file video.php */
 /* Location: ./application/controllers/video.php */

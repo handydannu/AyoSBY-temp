@@ -13,26 +13,23 @@
   <section class="mt-3">
     <div class="row">
        <?php for($i = 0; $i < count($photo); $i++) { ?>
-                    <?php
-                      $dc = content_time($photo[$i]['post_date_created']);
-                      $dp = id_time($photo[$i]['post_date']);
+                <?php
+                  $dc = content_time($photo[$i]['post_date_created']);
+                  $dp = id_time($photo[$i]['post_date']);
 
-                      $url = site_url('view') . '/' . $dc['year'] . '/' . $dc['month'] . '/' . $dc['day'] . '/' . $photo[$i]['post_id'] . '/' . $photo[$i]['post_name'];
-                      $url_img = $this->config->item('images_articles_uri') . $dc['year'] . '/' . $dc['month'] . '/' . $dc['day'] . '/' . $photo[$i]['post_id'] . '/';
-                    ?>
-      
+                  $url = site_url('view') . '/' . $dc['year'] . '/' . $dc['month'] . '/' . $dc['day'] . '/' . $photo[$i]['post_id'] . '/' . $photo[$i]['post_name'];
+                  $url_img = $this->config->item('images_articles_uri') . $dc['year'] . '/' . $dc['month'] . '/' . $dc['day'] . '/' . $photo[$i]['post_id'] . '/';
+                ?>      
         <div class="col-lg-6 col-md-6 col-sm-6">
         <a href="<?php echo $url; ?>">
         <img class="img-fluid post-img shade" src="<?php echo $url_img . $photo[$i]['post_image_thumb']; ?>" onerror="this.src='<?php echo base_url();?>assets/img/nophoto.png';"></a>
-        <span class="date-posted"> <?php echo $dp; ?></span>
+        <span class="date-posted"><i class="fas fa-clock"></i>&nbsp;<?php echo $dp; ?></span>
         <h5>
           <a href="<?php echo $url; ?>"><?php echo $photo[$i]['post_title']; ?></a>
         </h5>
       
        </div>
       <?php } ?>
-
-
     </div>
   </section>
 
@@ -44,15 +41,11 @@
         </ul>
       </div>
     </div>
-    <?php } ?>
+  <?php } ?>
 
 </div><!-- end col read -->
-
       <!-- right sidebar --> 
-    <?php $this->load->view($this->config->item('template_name') . 'sidebar-right-inner'); ?>
-
+  <?php $this->load->view($this->config->item('template_name') . 'sidebar-right-inner'); ?>
   </div>
-
 </div><!-- /.container 1 -->
-
 <?php $this->load->view($this->config->item('template_name') . 'main-bottom'); ?> 
